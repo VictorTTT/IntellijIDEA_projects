@@ -1,0 +1,2788 @@
+Index: src/paquete_por_defecto/Uso_tallas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/Uso_tallas.java	(date 1580834312363)
++++ src/paquete_por_defecto/Uso_tallas.java	(date 1580834312363)
+@@ -1,46 +0,0 @@
+-package paquete_por_defecto;
+-
+-import java.util.*;
+-
+-public class Uso_tallas
+-{
+-
+-
+-    enum Talla
+-    {
+-        MINI("S"), MEDIANO("M"), GRANDE("L"), MUY_GRANDE("XL");
+-
+-        private final String abreviatura;
+-
+-        Talla(String abreviatura)
+-        {
+-
+-            this.abreviatura = abreviatura;
+-        }
+-
+-        public String dameAbreviatura()
+-        {
+-            return abreviatura;
+-        }
+-
+-
+-    }
+-
+-    public static void main(String[] args)
+-    {
+-
+-        Scanner entrada = new Scanner(System.in);
+-
+-        System.out.println("Escribe una talla: MINI, MEDIANO, GRANDE, MUY_GRANDE ");
+-
+-        String entrada_datos = entrada.next().toUpperCase();
+-
+-        Talla la_talla = Enum.valueOf(Talla.class, entrada_datos);
+-
+-        System.out.println("Talla=" + la_talla);
+-
+-        System.out.println("Abreviatura=" + la_talla.dameAbreviatura());
+-
+-
+-    }
+-}
+Index: src/paquete_por_defecto/AccesoAplicacionWhile.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/AccesoAplicacionWhile.java	(date 1580960724832)
++++ src/paquete_por_defecto/AccesoAplicacionWhile.java	(date 1580960724832)
+@@ -1,43 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class AccesoAplicacionWhile
+-{
+-    public static void main(String[] args)
+-    {
+-        String clave ="Enzo";
+-
+-        String pass="";//"ejemplo de variable declarada pero vacía"
+-
+-        int contador=0;
+-
+-        while(!clave.equals(pass))
+-        {//mientras que el texto clave no sea igual al texto pass...
+-            //por lo tanto siempre va a entrar porque la cadena está vacía
+-
+-            pass= JOptionPane.showInputDialog("introduce la contraseña, por favor\n");
+-
+-            if(!clave.contentEquals(pass))
+-            {
+-                System.out.println("Contraseña incorrecta\n");
+-                contador++;
+-            }
+-            else
+-            {
+-                System.out.println("Has acertado a la "+contador+"vez\n");
+-            }
+-
+-            if(contador==3)
+-            {
+-                System.out.println("hasta aquí hemos llegado\n");
+-                break;
+-            }
+-
+-
+-        }
+-
+-        System.out.println("El programa ha terminado");
+-        }
+-    }
+-
+Index: .idea/dictionaries/cotir.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/dictionaries/cotir.xml	(date 1580821866066)
++++ .idea/dictionaries/cotir.xml	(date 1580821866066)
+@@ -1,9 +0,0 @@
+-<component name="ProjectDictionaryState">
+-  <dictionary name="cotir">
+-    <words>
+-      <w>bidimensionales</w>
+-      <w>contraseña</w>
+-      <w>pequeña</w>
+-    </words>
+-  </dictionary>
+-</component>
+\ No newline at end of file
+Index: .idea/vcs.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/vcs.xml	(date 1581011023834)
++++ .idea/vcs.xml	(date 1581011023834)
+@@ -1,6 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="VcsDirectoryMappings">
+-    <mapping directory="$PROJECT_DIR$" vcs="Git" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/.gitignore
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/.gitignore	(date 1581010993560)
++++ .idea/.gitignore	(date 1581010993560)
+@@ -1,2 +0,0 @@
+-# Default ignored files
+-/workspace.xml
+\ No newline at end of file
+Index: .idea/codeStyles/Project.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/Project.xml	(date 1580807660519)
++++ .idea/codeStyles/Project.xml	(date 1580807660519)
+@@ -1,11 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <code_scheme name="Project" version="173">
+-    <codeStyleSettings language="JAVA">
+-      <option name="KEEP_FIRST_COLUMN_COMMENT" value="false" />
+-      <option name="BRACE_STYLE" value="2" />
+-      <option name="CLASS_BRACE_STYLE" value="2" />
+-      <option name="METHOD_BRACE_STYLE" value="2" />
+-      <option name="LAMBDA_BRACE_STYLE" value="2" />
+-    </codeStyleSettings>
+-  </code_scheme>
+-</component>
+\ No newline at end of file
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(date 1580808005842)
++++ .idea/misc.xml	(date 1580808005842)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="EntryPointsManager">
+-    <entry_points version="2.0" />
+-  </component>
+-  <component name="ProjectKey">
+-    <option name="state" value="project://e2804f05-5315-4fc6-a121-c522a6c26470" />
+-  </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_13" default="true" project-jdk-name="13" project-jdk-type="JavaSDK">
+-    <output url="file://$PROJECT_DIR$/out" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: .idea/description.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/description.html	(date 1580808004964)
++++ .idea/description.html	(date 1580808004964)
+@@ -1,1 +0,0 @@
+-<html>Simple <b>Java</b> application that includes a class with <code>main()</code> method</html>
+\ No newline at end of file
+Index: .idea/project-template.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/project-template.xml	(date 1580808004980)
++++ .idea/project-template.xml	(date 1580808004980)
+@@ -1,3 +0,0 @@
+-<template>
+-  <input-field default="com.company">IJ_BASE_PACKAGE</input-field>
+-</template>
+\ No newline at end of file
+Index: IntellijIDEA_projects.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- IntellijIDEA_projects.iml	(date 1580644574219)
++++ IntellijIDEA_projects.iml	(date 1580644574219)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+-
+Index: .idea/modules.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/modules.xml	(date 1580821381199)
++++ .idea/modules.xml	(date 1580821381199)
+@@ -1,8 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="ProjectModuleManager">
+-    <modules>
+-      <module fileurl="file://$PROJECT_DIR$/PrimerosPasos.iml" filepath="$PROJECT_DIR$/PrimerosPasos.iml" />
+-    </modules>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/poo_pildoras/Coche.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/poo_pildoras/Coche.java	(date 1580811325590)
++++ src/poo_pildoras/Coche.java	(date 1580811325590)
+@@ -1,158 +0,0 @@
+-package poo_pildoras;
+-
+-public class Coche //aquí especificamos las características (propiedades) comunes de los objetos 
+-{
+-	private int ruedas;//ejemplo de encapsulación para que estas variables no puedan modificarse desde otra clase
+-	///////
+-	private int largo;
+-	///////
+-	private int ancho;
+-	///////
+-	private int motor;
+-	///////
+-	private int peso_plataforma; 
+-	///////
+-
+-
+-	private String color;//estas variables sí que queremos que se puedan modificar desde otras calses
+-
+-	private int peso_total;//estas variables sí que queremos que se puedan modificar desde otras calses
+-
+-	private boolean asientos_cuero,climatiozador;//estas variables sí que queremos que se puedan modificar desde otras calses
+-
+-
+-	public Coche() //método constructor,encargado de darle un estado inicial al obejeto: public + nombre clase ()
+-	//el flujo de ejecución viene hasta aquí a través 
+-	//de la invocación del constructor en el main.
+-
+-	{
+-		ruedas=4;
+-
+-		largo=2000;
+-
+-		ancho=300;
+-
+-		motor=1600;
+-
+-		peso_plataforma=500;
+-
+-	}
+-
+-	public String dime_datos_generales() //función
+-	{
+-		return "La plataforma del vehícuo tiene "+ruedas+" ruedas "+" Mide \n"+largo/1000+
+-				" mertos con un ancho de  "+ancho+" cm y un peso de plataforma de \n"+ peso_plataforma+" kg ";
+-	}
+-
+-	public String dime_largo() //función
+-	//método Getter(función) que devuelve un string,puede acceder al largo a pesar de que 
+-	//está encapsulado porque se encuentra dentro de la misma clase.
+-	{
+-		return "El largo del coche es "+largo;
+-	}
+-
+-	public int dime_ruedas() //función
+-	{
+-		return ruedas;
+-	}
+-
+-	public void establece_color(String color_coche) //procedimiento
+-	//método setter(procedimiento) encargado de modificar el  valor de una propiedad.
+-	{
+-		color=color_coche;
+-	}
+-
+-	public String dime_color()//función
+-	{
+-		return	"El color del coche es "+color;
+-	}
+-
+-	public void configura_asientos(String asientos_cuero) // procedimiento SETTER
+-	{
+-		//this.asientos_cuero=asientos_cuero;//la palabra reservada this hace referencia a la variable de la clase
+-		if (asientos_cuero.equalsIgnoreCase("si"))//de esta forma se comparan los string en Java
+-		{
+-			this.asientos_cuero=true;
+-		}
+-		else
+-		{
+-			this.asientos_cuero=false;
+-		}
+-	}
+-
+-	public String dime_asientos()//función
+-	{
+-		if (asientos_cuero) 
+-		{
+-			return "El coche tiene asientos de cuero";
+-		}
+-
+-		else 
+-		{
+-			return "El coche tiene asientos de serie";
+-		}
+-	}
+-
+-	public void configura_climatizador(String climatiozador) //procedimiento
+-	{
+-		if(climatiozador.equalsIgnoreCase("si"))//de esta forma se comparan los string en Java
+-		{
+-			this.climatiozador=true;
+-		}
+-
+-		else 
+-		{
+-			this.climatiozador=false;
+-		}
+-	}
+-
+-	public String dime_climatizador() //función
+-	{
+-		if(climatiozador)
+-		{
+-			return "El coche incorpora climatizador";
+-		}
+-		else 
+-		{
+-			return "El coche lleva aire acondicionado";
+-		}
+-
+-	}
+-
+-	public String dime_peso_coche() //setter  + getter (función +procedimiento)
+-	{
+-		int peso_carroceria=500;
+-
+-		int peso_platafoma=500;
+-
+-		peso_total=peso_platafoma+peso_carroceria;
+-
+-		if(asientos_cuero)
+-		{
+-			peso_total=peso_total+50;	
+-		}
+-		if(climatiozador)
+-		{
+-			peso_total=peso_total+20;			
+-		}
+-
+-		return"El peso del coche es "+peso_total;
+-	}
+-
+-	public int precio_coche() //función
+-	{
+-		int precio_final=10000;
+-
+-		if(asientos_cuero)
+-		{
+-			precio_final+=2000;
+-		}
+-
+-		if(climatiozador)
+-		{
+-			precio_final+=1500;
+-		}
+-		return precio_final;
+-	}
+-
+-}
+Index: src/paquete_por_defecto/UoArrays4ForeachAleatorio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/UoArrays4ForeachAleatorio.java	(date 1580980217300)
++++ src/paquete_por_defecto/UoArrays4ForeachAleatorio.java	(date 1580980217300)
+@@ -1,24 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class UoArrays4ForeachAleatorio
+-{
+-    public static void main(String[] args)
+-    {
+-        int[] matriz=new int[15];
+-
+-        for (int i = 0; i < matriz.length; i++)
+-        {
+-            matriz[i]=(int)Math.round(Math.random()*100);
+-            //matriz es igual a la refundición en int(porque random devuelve double)
+-            //redondeo de resultado y número aleatorio de 0 a 100, recordamos que el método
+-            //random genera double aleatorio entre 0 y 1 y para que sea de un rango int mayor
+-            //basta con hacer loque vemos aquí:refundición, y multiplicación de unidad seguidad de 0.
+-        }
+-
+-        for (int i : matriz)
+-        {
+-            System.out.print(i+"-");
+-        }
+-
+-    }
+-}
+Index: src/poo_pildoras/Uso_Pesona.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pildoras/Uso_Pesona.java	(date 1580849349328)
++++ src/poo_pildoras/Uso_Pesona.java	(date 1580849349328)
+@@ -1,123 +0,0 @@
+-package poo_pildoras;
+-
+-import java.util.Date;
+-import java.util.GregorianCalendar;
+-
+-public class Uso_Pesona
+-{
+-    public static void main(String[] args)
+-    {
+-        Persona[] lasPersonas= new Persona[2];
+-
+-        lasPersonas[0]=new Empleado2("Luis Conde",50000,2009, 2,25);
+-
+-        lasPersonas[1]=new Alumno("Ana Lopez", "Biol\u00f3gicas");
+-
+-        for (Persona e: lasPersonas)
+-        {
+-            System.out.println(e.dameNombre()+", "+ e.dameDescripcion());
+-        }
+-    }
+-}
+-
+-abstract class Persona
+-{
+-    public Persona(String nom)
+-    {
+-        nombre = nom;
+-    }
+-
+-    public String dameNombre()
+-    {
+-        return nombre;
+-    }
+-
+-    public abstract String dameDescripcion();
+-
+-    //Al declarar un método abstracto, hay que teneren cuenta que la clase a la que pertenece también lo debe ser
+-    //por otro lado, la sintaxis de estos métodos es sin llaves, ni código dentro de ellos, solo se declaran
+-
+-
+-    private String nombre;
+-
+-
+-}
+-
+-class Empleado2 extends Persona
+-{
+-    public Empleado2(String nom, double sue, int agno, int mes, int dia) //Constructor que recibe parámetros
+-    {
+-        super(nom);//Llamamos al constructor de la clase padre
+-
+-
+-
+-        sueldo = sue;
+-
+-        GregorianCalendar calendario = new GregorianCalendar(agno, mes - 1, dia);
+-        //objeto calendario de la clase "GregorianCalendar"(consultar api) que utiliza su segunda forma constructora
+-        //en la que le pasamos 3 parámetros de tipo entero para determinar un fecha, hay que tener en cuenta que el mes hay que ponerlo en -1
+-        //porque empieza a contar desde 0 como en las matrices
+-
+-        altaContrato = calendario.getTime();//Utilizamos el método get time de la calse GregorianCalendar que a su vez
+-        //es heredado de otra clase (Calendar),este método nos devuelve la fecha
+-
+-        ++IdSiguiente;
+-
+-        Id = IdSiguiente;
+-    }
+-
+-    public String dameDescripcion()
+-    {
+-        return "Este empleado tiene un Id= " + " con un sueldo= " + sueldo;
+-    }
+-
+-    public double dameSueldo()// función //método getter
+-    {
+-        return sueldo;    //el  valor de estas variables que nos devuelven los métodos ya lo hemos establecido en el constructor
+-    }
+-
+-    public Date dameFechaContrato() // función //método getter
+-    {
+-        return altaContrato;//el  valor de estas variables que nos devuelven los métodos ya lo hemos establecido en el constructor
+-    }
+-
+-    public void subeSueldo(double porcentaje) //procedimiento //método setter que va a establecer
+-    //el valor de la variable para la subida de sueldo será void porque no va a devolver nada
+-    {
+-        double aumento = sueldo * porcentaje / 100;
+-
+-        sueldo += aumento;
+-
+-
+-    }
+-
+-
+-    private double sueldo;//variables de clase encapsuladas por medio de private
+-
+-    private Date altaContrato;//variables de clase encapsuladas por medio de private
+-
+-    private static int IdSiguiente;
+-
+-    private int Id;
+-
+-}
+-
+-class Alumno extends Persona
+-{
+-    public Alumno(String nom, String car)
+-    {
+-        super(nom);
+-
+-        carrera=car;
+-    }
+-
+-    public String dameDescripcion()
+-    {
+-        return " Este alumno est\u00e1 estudiando la carrera de " + carrera;
+-    }
+-
+-    private String carrera;
+-
+-
+-
+-}
+Index: src/paquete_por_defecto/UsoBucleFor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/UsoBucleFor.java	(date 1580980276818)
++++ src/paquete_por_defecto/UsoBucleFor.java	(date 1580980276818)
+@@ -1,13 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class UsoBucleFor
+-{
+-    public static void main(String[] args)
+-    {
+-        for (int i = 0; i < 10; i++) //para i igual a 0 ;mientras que i sea menor que 10;incrementa su valor de 1 en 1.
+-        {
+-            System.out.println("Victor");
+-        }
+-
+-    }
+-}
+Index: src/poo_pildoras/Furgoneta.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pildoras/Furgoneta.java	(date 1580811325614)
++++ src/poo_pildoras/Furgoneta.java	(date 1580811325614)
+@@ -1,27 +0,0 @@
+-package poo_pildoras;
+-
+-public class Furgoneta extends Coche//extends se utiliza para indicar que una clase hereda de otra
+-{          //subclase//    //superclase//
+-           ////hijo///     ////padre////
+-
+-    private int capacidad_carga;
+-
+-    private int plazas_extra;
+-
+-    public Furgoneta(int plazas_extra, int capacidad_carga)//método constructor para Furgoneta
+-    {
+-        super();//super llama al método constructor de la clase padre(Coche)
+-
+-        this.capacidad_carga=capacidad_carga;//recordamos que this es para diferenciar la variable local
+-        // del argumento que se pasa por parámetro cuando tienen el mismo nombre
+-
+-        this.plazas_extra=plazas_extra;
+-    }
+-
+-
+-    public String dimeDatosFurgoneta() {
+-
+-        return "La capacidad de carga es: "+capacidad_carga
+-        +"Y las plazas son: "+plazas_extra;
+-    }
+-}
+Index: .idea/codeStyles/codeStyleConfig.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/codeStyles/codeStyleConfig.xml	(date 1580644578782)
++++ .idea/codeStyles/codeStyleConfig.xml	(date 1580644578782)
+@@ -1,5 +0,0 @@
+-<component name="ProjectCodeStyleConfiguration">
+-  <state>
+-    <option name="PREFERRED_PROJECT_CODE_STYLE" value="Default" />
+-  </state>
+-</component>
+\ No newline at end of file
+Index: src/paquete_por_defecto/UsoVariablesJava.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/UsoVariablesJava.java	(date 1580980339661)
++++ src/paquete_por_defecto/UsoVariablesJava.java	(date 1580980339661)
+@@ -1,18 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class UsoVariablesJava
+-{
+-    public static void main(String[] args)
+-    {
+-        int edad=36;   //Declaración en una linea
+-
+-        System.out.println(edad);
+-
+-
+-        edad =75;
+-		/*la siguiente instrucción imprime
+-		 en la consola el valor de la variable*/
+-        System.out.println(edad);
+-    }
+-
+-}
+Index: src/poo_pildoras/Pruebas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pildoras/Pruebas.java	(date 1580826477586)
++++ src/poo_pildoras/Pruebas.java	(date 1580826477586)
+@@ -1,91 +0,0 @@
+-package poo_pildoras;
+-
+-public class Pruebas
+-{
+-    public static void main(String[] args)
+-    {
+-        Empleados trabajador1=new Empleados("Paco ");
+-
+-        Empleados trabajador2 =new Empleados("Anna ");
+-
+-        Empleados trabajador3=new Empleados("Antonio ");
+-
+-        Empleados trabajador4=new Empleados("Maria ");
+-
+-
+-
+-        trabajador1.cambiaSeccion("RRHH");
+-
+-
+-
+-        System.out.println(trabajador1.devuelveDatos());
+-
+-
+-
+-        System.out.println(trabajador2.devuelveDatos());
+-
+-
+-
+-        System.out.println(trabajador3.devuelveDatos());
+-
+-
+-        System.out.println((trabajador4.devuelveDatos()));
+-
+-
+-        System.out.println(Empleados.dameIdSiguiente());
+-        //al declarar este método como estático podemos comprobar
+-        //cómo a la hora de utilizarlo tenemos que poner la clase delante
+-        //esto es porque no actúa sobre objetos
+-
+-
+-
+-
+-    }
+-}
+-
+-class Empleados
+-{
+-    public Empleados(String nom)
+-    {
+-        nombre=nom;
+-
+-        seccion="Administracion ";
+-
+-        Id=IdSiguiente;
+-
+-        IdSiguiente++;
+-
+-
+-
+-    }
+-
+-    public void cambiaSeccion(String seccion)//procedimiento
+-    {
+-    this.seccion=seccion;
+-    }
+-
+-
+-
+-    public String devuelveDatos()//funcion
+-
+-
+-    {
+-        return "el nombre es "+ nombre+"y la seccion es "+seccion+"y el Id es "+Id;
+-    }
+-
+-    public static String dameIdSiguiente()//clase propia satática
+-    {
+-        return "El Id siguiente es: "+ IdSiguiente;
+-    }
+-
+-
+-
+-private final  String nombre;//constante encapsulada
+-
+-private String seccion;//
+-
+-private int Id;//id como variable encapsulada
+-
+-    private static int IdSiguiente=1;//añadimos static a esta variable para poder incrementar
+-    //el valor de Id sin saltarnos las normas de encapsulacion.La convertimos en campo  de clase
+-}
+Index: src/paquete_por_defecto/PesoIdealJoptionPane.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/PesoIdealJoptionPane.java	(date 1580979669413)
++++ src/paquete_por_defecto/PesoIdealJoptionPane.java	(date 1580979669413)
+@@ -1,34 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class PesoIdealJoptionPane
+-{
+-    public static void main(String[] args)
+-    {
+-        String genero="";
+-
+-        do
+-        {
+-            genero=JOptionPane.showInputDialog("introduce tu género (H/M)");
+-
+-        } while (genero.equalsIgnoreCase("H")==false&&genero.equalsIgnoreCase("M")==false);
+-        //con genero.equalsIgnoreCase nos aseguramos de que nos valga el caracter tanto
+-        // en mayúscula como en minúscula(por eso ignora Case)
+-
+-        int altura=Integer.parseInt(JOptionPane.showInputDialog("introduce tu altura en centímetros"));
+-        //variable entera que hay que parsear a int porque el método showinputdialog utiliza string
+-
+-        int pesoideal=0;
+-
+-        if (genero.equalsIgnoreCase("H"))
+-        {
+-            pesoideal=altura-110;
+-        }
+-        else if (genero.equalsIgnoreCase("M"))
+-        {
+-            pesoideal=altura-120;
+-        }
+-        System.out.println("tu peso ideal es: "+pesoideal);
+-    }
+-}
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(date 1580980011270)
++++ .idea/encodings.xml	(date 1580980011270)
+@@ -1,26 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Encoding">
+-    <file url="file://$PROJECT_DIR$/../IntellijIDEA_programasJavaPrimerosPasos/AccesoAplicciónWhile.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/com/company/AccesoAplicciónWhile.java" charset="UTF-8" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/AccesoAplicacionWhile.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/AdivinaNumeroAleatorio.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/AdivinaNúmeroAleatorio.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/AreasGeométricas.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/EntradaEjemplo1.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/EntradaEjemplo2.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/EntradaNúmeros.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/EvaluaEdad.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/FactorialForOptionPane.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/ManipulaciondeCadenas1.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/ManipulacióndeCadenas2.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/ManipulacióndeCadenas3.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/PesoIdealJoptionPane.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/UsoArrays.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/paquete_por_defecto/UsoArrays2Foreach.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/poo_pildoras/Coche.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.java" charset="windows-1252" />
+-    <file url="file://$PROJECT_DIR$/src/poo_pildoras/Uso_vehículo.java" charset="windows-1252" />
+-    <file url="PROJECT" charset="UTF-8" />
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/paquete_por_defecto/UsoArrays.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/UsoArrays.java	(date 1580979836758)
++++ src/paquete_por_defecto/UsoArrays.java	(date 1580979836758)
+@@ -1,35 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class UsoArrays
+-{
+-    public static void main(String[] args)
+-    {
+-
+-		/*int[] matriz=new int[5];//utilizar este nombre para los arrays, para que el tajo de teclado para crearlas sea más efectivo
+-
+-	 int matriz1[]=new int[6];//otra forma de declarar matrices, también correcta pero menos usada
+-
+-	        matriz[0]=5;
+-	        matriz[1]=38;
+-	        matriz[2]=-15;
+-	        matriz[3]=92;
+-	        matriz[4]=71;
+-
+-			 /*System.out.println(array[0]);
+-			 System.out.println(array[1]);
+-			 System.out.println(array[2]);
+-			 System.out.println(array[3]);
+-			 System.out.println(array[4]);*/
+-
+-        int[] matriz= {5,38,-15,92,71};//segunda forma de declarar matrices, esta vez en una sola línea.
+-
+-        for (int i = 0; i < matriz.length; i++)
+-        {
+-            System.out.println(" valor del índice "+ i+" = "+matriz[i]);
+-        }
+-
+-
+-
+-    }
+-
+-}
+Index: PrimerosPasos.iml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- PrimerosPasos.iml	(date 1580808004995)
++++ PrimerosPasos.iml	(date 1580808004995)
+@@ -1,12 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<module type="JAVA_MODULE" version="4">
+-  <component name="NewModuleRootManager" inherit-compiler-output="true">
+-    <exclude-output />
+-    <content url="file://$MODULE_DIR$">
+-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+-    </content>
+-    <orderEntry type="inheritedJdk" />
+-    <orderEntry type="sourceFolder" forTests="false" />
+-  </component>
+-</module>
+-
+Index: src/paquete_por_defecto/UsoArrays2Foreach.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/UsoArrays2Foreach.java	(date 1580980008488)
++++ src/paquete_por_defecto/UsoArrays2Foreach.java	(date 1580980008488)
+@@ -1,38 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class UsoArrays2Foreach
+-{
+-    public static void main(String[] args)
+-    {
+-        //String[] matriz=new String[8];
+-
+-		/*matriz[0]="España";
+-		matriz[1]="Méjico";
+-		matriz[2]="Colombia";
+-		matriz[3]="Perú";
+-		matriz[4]="Chile";
+-		matriz[5]="Argentina";
+-		matriz[6]="Ecuador";
+-		matriz[7]="Venezuela";*/
+-
+-
+-
+-		/*for (int i = 0; i < matriz.length; i++)
+-		{
+-			System.out.println("País "+ (i+1) + " "+matriz[i]);
+-		}*/
+-
+-        String[]matriz= {"España","Méjico","Colombia","Perú","Chile","Argentina","Ecuador","Venezuela"};
+-
+-        for (String i : matriz)
+-        {
+-            System.out.println("Pais "+ i);
+-        }
+-
+-        //Esta es la sintaxis para recorrer una matriz con foreach. Como podemos ver,
+-        //dentro de los paréntesis se declara una variable del mismo tipo que la matriz
+-        //a continuación dos puntos y el nombre de la matriz con la que vamos a trabajar
+-        //con él ,nos ahorramos el trabajo de ver dónde comienza y dónde acaba cada matriz.Muy útil.
+-    }
+-
+-}
+Index: src/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.java	(date 1580935471300)
++++ src/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.java	(date 1580935471300)
+@@ -1,251 +0,0 @@
+-package poo_pildoras;
+-
+-import java.util.*;
+-
+-public class Uso_Empleado1archivoClasesPropiasYPredefinidas
+-        //en este ejemplo utilizamos un único fichero fuente que contiene todas las calases que forman el programa
+-{
+-
+-    public static void main(String[] args)
+-    {
+-
+-
+-        Jefatura jefe_RRHH = new Jefatura("Miguel Soriano ", 55000, 1995, 3, 30);
+-
+-        jefe_RRHH.estableceIncentivo(2570.50);
+-
+-
+-        Empleado[] misEmpleados = new Empleado[6];//es lo mismo que hacer String miarray=new String[3]
+-
+-        misEmpleados[0] = new Empleado("Ana ", 30000, 20000, 7, 7);
+-
+-        misEmpleados[1] = new Empleado("Carlos ", 5000, 1995, 6, 15);
+-
+-        misEmpleados[2] = new Empleado("Paco ", 2500, 2005, 9, 25);
+-
+-        misEmpleados[3] = new Empleado("Antonio", 47500, 2009, 11, 9);
+-
+-
+-        misEmpleados[4] = jefe_RRHH;//Polimorfismo en acción. Principio de sustitució
+-        //utilizamos un objeto de la subclase (Jefatura) cuando el programa espera a uno de la clase(polimorfismo)
+-
+-        misEmpleados[5] = new Jefatura("Maria ", 95000, 1999, 5, 26);
+-        //en el array mis empleados podemos almacenar tanto objetos de la clase Empleado
+-        //como de la subclase Jefatura, es el caso de jefe_RRHH que es una nueva instancia que hemos creado
+-        //y también lo es el objeto que creamos con el constructor Jefatura en la linea 55 del código
+-
+-        Jefatura jefa_Finanzas = (Jefatura) misEmpleados[5];
+-        //esto es un casting para convertir un objeto de un tipo en objeto de otro tipo
+-
+-        jefa_Finanzas.estableceIncentivo(55000);
+-
+-       /* Empleado director_comercial=new Jefatura("Sandra",8500,2012,5,5);//principio de sustitución,
+-        //declaramos un objeto Jefatura a través de la clase Empleado graciaas a la herencia de Jefatura por Empleado
+-
+-        Comparable ejemplo=new Empleado("Elisabeth ",95000,2011,6,7);//Aquí estamos creando un obeto empleadod esde la interfaz comparable
+-        // esto solo es posible hacerlo de esta manera, con el prinipio de sustitución. Si intentáramos hacerlo directamente desde la interfaz
+-        //nos daría error.
+-
+-        if (director_comercial instanceof Empleado)//Utilizamos un if para saber si director_comercial pertenece a Empleado por medio de intanceof
+-        {//¿director_comercial es una instancia de Empleado?
+-
+-            System.out.println("Es de tipo Jefatura");//en caso afirmativo, imprimirá en consola que es de Jefatura,
+-            // gracias a que director_comercial pertenece Jefatura que a su vez  hereda de Empleado
+-
+-            if (ejemplo instanceof Comparable)//¿ejemplo es una instancia de Comparable?,
+-                // Sí que lo es porque aunque no la hemos instanciado dentro de la interfaz, si lo hemos hecho a través del principio de sustitución
+-            {
+-                System.out.println("Implementa la interfaz Comparable");
+-            }
+-        }*/
+-
+-        Arrays.sort(misEmpleados);
+-
+-        System.out.println(jefa_Finanzas.tomar_decisiones("Dar más días de vacaciones a los empleados"));
+-
+-
+-        jefa_Finanzas.establece_bonus(500);
+-
+-        System.out.println("EL jefe " + jefa_Finanzas.dameNombre() + " Tiene un bonus de " + jefa_Finanzas.establece_bonus(500));
+-
+-
+-        for (Empleado e : misEmpleados)//for each creamos dentro de él una vaiable de tipo Empledo e: misEmpleados
+-        {
+-            e.subeSueldo(5);
+-        }
+-
+-
+-        for (Empleado e : misEmpleados)
+-        {
+-            System.out.println("Nombre: " + e.dameNombre()
+-                    + "Sueldo: " + e.dameSueldo() + "Fecha de Alta " + e.dameFechaContrato());
+-        }
+-
+-
+-    }
+-
+-
+-}
+-
+-class Empleado implements Comparable, Trabajadores//Empleado implementa la interfaz Comparable
+-        //interfaz predefinida que nos obliga a implementar el método abstracto comparaTo(T)
+-{
+-
+-
+-    public Empleado(String nom, double sue, int agno, int mes, int dia) //Constructor que recibe parámetros
+-    {
+-        nombre = nom;//Decimos que la variable nombre tiene que ser igual alparámetro que le pasamos a través del constructor
+-
+-        sueldo = sue;
+-
+-        GregorianCalendar calendario = new GregorianCalendar(agno, mes - 1, dia);
+-        //objeto calendario de la clase "GregorianCalendar"(consultar api) que utiliza su segunda forma constructora
+-        //en la que le pasamos 3 parámetros de tipo entero para determinar un fecha, hay que tener en cuenta que el mes hay que ponerlo en -1
+-        //porque empieza a contar desde 0 como en las matrices
+-
+-        altaContrato = calendario.getTime();//Utilizamos el método get time de la calse GregorianCalendar que a su vez
+-        //es heredado de otra clase (Calendar),este método nos devuelve la fecha
+-
+-        ++IdSiguiente;
+-
+-        Id = IdSiguiente;
+-
+-    }
+-
+-    public double establece_bonus(double gratificacion)
+-    {
+-        return Trabajadores.bonus_base + gratificacion;
+-    }
+-
+-    public Empleado(String nom)//sobrecarga de método constructor, que se diferenecia delanterior en el número de argumentos
+-    {
+-        this(nom, 30000, 2000, 1, 1);
+-        //cuando utilizamos un this dentro de un metodo constructor sobrecargado,
+-        //lo que hace es llamar al otro constructor de la clase que se llama igual y que tiene los mismos parámetros
+-        //que estamos indicando
+-    }
+-
+-    //en esta ocasión colocamos las variables al final de la clase para comprobar que
+-    //aun haciendolo así nno afecta al resultado
+-
+-    public String dameNombre() // función //método getter
+-    {
+-        return nombre + "Id: " + "  " + Id;    //el  valor de estas variables que nos devuelven los métodos ya lo hemos establecido en el constructor
+-    }
+-
+-    public double dameSueldo()// función //método getter
+-    {
+-        return sueldo;    //el  valor de estas variables que nos devuelven los métodos ya lo hemos establecido en el constructor
+-    }
+-
+-    public Date dameFechaContrato() // función //método getter
+-    {
+-        return altaContrato;//el  valor de estas variables que nos devuelven los métodos ya lo hemos establecido en el constructor
+-    }
+-
+-    public void subeSueldo(double porcentaje) //procedimiento //método setter que va a establecer
+-    //el valor de la variable para la subida de sueldo será void porque no va a devolver nada
+-    {
+-        double aumento = sueldo * porcentaje / 100;
+-
+-        sueldo += aumento;
+-
+-
+-    }
+-
+-
+-    public int compareTo(Object miObjeto)
+-    {
+-        Empleado otroEmpleado = (Empleado) miObjeto;
+-
+-        if (this.Id < otroEmpleado.Id)
+-        {
+-            return -1;
+-        }
+-
+-        if (this.Id > otroEmpleado.Id)
+-        {
+-            return 1;
+-        }
+-
+-        return 0;
+-
+-    }
+-
+-    private String nombre;//variables de clase encapsuladas por medio de private
+-
+-    private double sueldo;//variables de clase encapsuladas por medio de private
+-
+-    private Date altaContrato;//variables de clase encapsuladas por medio de private
+-
+-    private static int IdSiguiente;
+-
+-    private int Id;
+-
+-
+-}
+-
+-class Jefatura extends Empleado implements Jefes //Jefatura hereda de Empleado y también lo hace de la interfaz Jefes//una vez creamos la clase que hereda de la otra, tenemos que crear
+-        //un nuevo constructor, de lo contrario el programa buscará al constructor de la clase que hereda o a uno por
+-        // defecto y de no encontrarlos, nos marcará error.
+-        // la herencia múltiple solo es posible a travès de interfaces, si intentamos hacerlo solamente con clases Java nos da error
+-{
+-
+-    public String tomar_decisiones(String decision)//método obligado porque proviene de la interfaz
+-    {
+-        return "UN miembro de la dirección ha tomado la decisión de : " + decision;
+-    }
+-
+-    public double establece_bonus(double grtificacion)
+-    {
+-        double prima = 2000;
+-
+-        return Trabajadores.bonus_base + grtificacion + prima;
+-
+-
+-    }
+-
+-
+-    public Jefatura(String nom, double sue, int agno, int mes, int dia)
+-    {
+-        super(nom, sue, agno, mes, dia);
+-    }
+-
+-
+-    public void estableceIncentivo(double b)//setter
+-    {
+-        incentivo = b;
+-
+-    }
+-
+-
+-    public double dameSuledo()
+-    {
+-        double sueldoJefe = super.dameSueldo();//ponemos super para decir que no llame a
+-        //dame sueldo de la clase Jefatura sino que lo haga al de la clase empleado
+-
+-        return sueldoJefe + incentivo;
+-    }
+-
+-
+-    private double incentivo;
+-
+-
+-}
+-
+-class Director extends Jefatura//Director hereda de Jefatura
+-{
+-
+-
+-
+-    public Director(String nom, double sue, int agno, int mes, int dia)
+-    {
+-        super(nom, sue, agno, mes, dia);
+-
+-
+-    }
+-
+-
+-}
+-
+-
+Index: src/paquete_por_defecto/UsoArrays3Foreach.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/UsoArrays3Foreach.java	(date 1580980099136)
++++ src/paquete_por_defecto/UsoArrays3Foreach.java	(date 1580980099136)
+@@ -1,25 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class UsoArrays3Foreach
+-{
+-    public static void main(String[] args)
+-    {
+-        String[] matriz=new String[8];
+-
+-        for (int i = 0; i < matriz.length; i++)
+-        {
+-            matriz[i]= JOptionPane.showInputDialog("introduce un pais");
+-        }//rellenar una matriz con for
+-
+-        for (String string : matriz)
+-        {
+-            System.out.println("Pais "+ string);
+-        }//imprimir contenido de una matriz con foreach
+-
+-
+-
+-    }
+-
+-}
+Index: src/poo_pildoras/Uso_vehículo.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/poo_pildoras/Uso_vehículo.java	(date 1580849586782)
++++ src/poo_pildoras/Uso_vehículo.java	(date 1580849586782)
+@@ -1,57 +0,0 @@
+-package poo_pildoras;
+-import org.w3c.dom.ls.LSOutput;
+-
+-import javax.swing.*;//para show input dialog
+-public class Uso_vehículo
+-{
+-
+-	public static void main(String[] args) 
+-	{
+-		/*Coche Renault=new Coche();//INSTANCIAR UNA CLASE. EJEMPLAR DE CLASE
+-		//clase objeto=operador nombre del método constructor
+-
+-		System.out.println(Renault.dime_largo());
+-
+-
+-		System.out.println("Este coche tiene "+ Renault.dime_ruedas()+" ruedas");
+-		//                                       objeto.propiedad
+-
+-		Coche micoche=new Coche();
+-
+-		micoche.establece_color(JOptionPane.showInputDialog("introduce color"));
+-
+-		System.out.println(micoche.dime_datos_generales());
+-
+-		System.out.println(micoche.dime_color());
+-		
+-		micoche.configura_asientos(JOptionPane.showInputDialog("¿tiene asientos de cuero?"));
+-		
+-		System.out.println(micoche.dime_asientos());
+-		
+-		micoche.configura_climatizador(JOptionPane.showInputDialog("¿tiene climatizador?"));
+-		
+-		System.out.println(micoche.dime_climatizador());
+-		
+-		System.out.println(micoche.dime_peso_coche());
+-		
+-		System.out.println("El precio del coche es "+micoche.precio_coche());*/
+-
+-        Coche micoche1=new Coche();
+-
+-		micoche1.establece_color("Rojo");
+-
+-		Furgoneta miFurgoneta1=new Furgoneta(7,580);
+-
+-		miFurgoneta1.establece_color("Azul");
+-
+-		miFurgoneta1.configura_asientos("si");
+-
+-		miFurgoneta1.configura_climatizador("si");
+-
+-		System.out.println(micoche1.dime_datos_generales()+micoche1.dime_color());
+-
+-		System.out.println(miFurgoneta1.dime_datos_generales()+miFurgoneta1.dimeDatosFurgoneta());
+-	}
+-
+-
+-}
+\ No newline at end of file
+Index: src/paquete_por_defecto/FactorialForOptionPane.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/FactorialForOptionPane.java	(date 1580979052532)
++++ src/paquete_por_defecto/FactorialForOptionPane.java	(date 1580979052532)
+@@ -1,21 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class FactorialForOptionPane
+-{
+-    public static void main(String[] args)
+-    {
+-        long resultado=1L;
+-        //declaramos como Long para garantizar que el resultado se pueda mostrar
+-
+-        int numero=Integer.parseInt(JOptionPane.showInputDialog("introduce el número del que quieres saber el factorial"));
+-        //declaramos variable que antes de convierte el string en int y luego pide número por ventana
+-
+-        for (int i = numero; i >0; i--)
+-        {
+-            resultado=resultado*i;
+-        }
+-        System.out.println(" El factorial de "+numero+" es "+resultado);
+-    }
+-}
+Index: src/paquete_por_defecto/ManipulaciondeCadenas1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/ManipulaciondeCadenas1.java	(date 1580979311859)
++++ src/paquete_por_defecto/ManipulaciondeCadenas1.java	(date 1580979311859)
+@@ -1,23 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class ManipulaciondeCadenas1
+-{
+-    public static void main(String[] args)
+-    {
+-        String nombre ="Victor";//Variable objeto nombre
+-
+-        System.out.println("Mi nombre es " + nombre);//mostrar nombre
+-
+-        System.out.println("Mi nombre tiene " +  nombre.length()+ " letras ");//método .length para saber la longitud del objeto
+-
+-        System.out.println("La primera letra es la "+nombre.charAt(0));// método.chartAt para, con el número entre paréntesis
+-        //indicar la posición que ocupa un determinado caracter
+-
+-        int UltimaLetra=nombre.length();//declaración de variable entera  igualándola a la longitud del objeto nombre
+-
+-        System.out.println("Y la última letra es la "+nombre.charAt(UltimaLetra-1));////aquí estamos uniendo varios métodos,
+-        //por un lado .charAt nos devolverá un caracter y entre paréntesis ponemos la variable entera con-1 para que sea el último.
+-
+-        System.out.println();
+-    }
+-}
+Index: src/paquete_por_defecto/ManipulacióndeCadenas2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/ManipulacióndeCadenas2.java	(date 1580979381036)
++++ src/paquete_por_defecto/ManipulacióndeCadenas2.java	(date 1580979381036)
+@@ -1,19 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class ManipulacióndeCadenas2
+-{
+-    public static void main(String[] args)
+-    {
+-        String frase="Hoy es un estupendo dia para aprender a programar en Java";
+-
+-        String fraseResumen=frase.substring(0,29)+" irnos a la playa y olvidarnos de todo"+
+-                " y "+frase.substring(29,57);
+-
+-
+-        System.out.println(fraseResumen);
+-
+-
+-
+-    }
+-
+-}
+Index: src/paquete_por_defecto/ManipulacióndeCadenas3.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/ManipulacióndeCadenas3.java	(date 1580979486391)
++++ src/paquete_por_defecto/ManipulacióndeCadenas3.java	(date 1580979486391)
+@@ -1,16 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class ManipulacióndeCadenas3
+-{
+-    public static void main(String[] args)
+-    {
+-        String alumno1,alumno2;
+-
+-        alumno1="David";
+-
+-        alumno2="david";
+-
+-        System.out.println(alumno1.equalsIgnoreCase(alumno2));
+-
+-    }
+-}
+Index: src/VictorTTT_programs/Hombre.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Hombre.java	(date 1580934977488)
++++ src/VictorTTT_programs/Hombre.java	(date 1580934977488)
+@@ -1,5 +0,0 @@
+-package VictorTTT_programs;
+-
+-public interface Hombre
+-{
+-}
+Index: src/VictorTTT_programs/Mujer.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Mujer.java	(date 1580934989452)
++++ src/VictorTTT_programs/Mujer.java	(date 1580934989452)
+@@ -1,5 +0,0 @@
+-package VictorTTT_programs;
+-
+-public interface Mujer
+-{
+-}
+Index: src/VictorTTT_programs/Uso_Humano.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Uso_Humano.java	(date 1580935471417)
++++ src/VictorTTT_programs/Uso_Humano.java	(date 1580935471417)
+@@ -1,9 +0,0 @@
+-package VictorTTT_programs;
+-
+-public class Uso_Humano
+-{
+-    public static void main(String[] args)
+-    {
+-
+-    }
+-}
+Index: src/paquete_por_defecto/EvaluaEdad.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/EvaluaEdad.java	(date 1580978894141)
++++ src/paquete_por_defecto/EvaluaEdad.java	(date 1580978894141)
+@@ -1,37 +0,0 @@
+-package paquete_por_defecto;
+-
+-import java.util.Scanner;
+-
+-public class EvaluaEdad
+-{
+-    public static void main(String[] args)
+-    {
+-        Scanner ReadLine=	new Scanner(System.in);
+-        //clase//objeto //constructor
+-
+-        System.out.println("Introduce tu edad, por favor");
+-
+-        int edad=ReadLine.nextInt();
+-        //variable entera es igual al objeto de la clase scanner y
+-        //el siguiente entero que se introduzca por consola.
+-
+-        if(edad<18)	//si...
+-        {
+-            System.out.println("Eres adolescente");
+-        }
+-        else if(edad<40)//y si no...
+-        {
+-            System.out.println("Eres joven");
+-        }
+-        else if(edad<65) //y si no...
+-        {
+-            System.out.println("eres maduro");
+-        }
+-        else//si nada de lo anterior es verdad haz esto...
+-        {
+-            System.out.println("cuídate");
+-        }
+-
+-    }
+-
+-}
+Index: src/paquete_por_defecto/EntradaNúmeros.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/EntradaNúmeros.java	(date 1580978807127)
++++ src/paquete_por_defecto/EntradaNúmeros.java	(date 1580978807127)
+@@ -1,32 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class EntradaNúmeros
+-{
+-    public static void main(String[] args)
+-
+-    {
+-		/*double x =100000.0;
+-
+-		System.out.printf("%1.4f",x/3);
+-		//Método printf (imprime con formato) para acotar el número de
+-		//decimales que nos devuelve un resultado, tiene 2 parámetros
+-		//antes de la coma el formato que le debe aplicar al valor numérico
+-		//después de ella, el valor numérico en si*/
+-
+-        String num1= JOptionPane.showInputDialog("introduce un numero");
+-        //pedimos número y lo almacenamos como string en num1
+-
+-        double num2=Double.parseDouble(num1);
+-        //parseamos y lo convertimos en double, porque sabemos que el método que
+-        //utilizaremos así lo requiere
+-
+-        System.out.print(" La raiz de " +num2+" es ");
+-        //Mensaje informando que NO da salto de línea
+-
+-        System.out.printf("%1.7f",Math.sqrt(num2));
+-        //Imprimimos con formato de dos decimales la raiz cuadrada a través
+-        //del método estático Math.sqrt
+-    }
+-}
+Index: src/VictorTTT_programs/Anciano.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Anciano.java	(date 1580935471218)
++++ src/VictorTTT_programs/Anciano.java	(date 1580935471218)
+@@ -1,5 +0,0 @@
+-package VictorTTT_programs;
+-
+-public class Anciano extends Humano
+-{
+-}
+Index: src/VictorTTT_programs/Nino.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Nino.java	(date 1580958689101)
++++ src/VictorTTT_programs/Nino.java	(date 1580958689101)
+@@ -1,5 +0,0 @@
+-package VictorTTT_programs;
+-
+-public class Nino extends Humano
+-{
+-}
+Index: src/VictorTTT_programs/Adulto.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Adulto.java	(date 1580935471251)
++++ src/VictorTTT_programs/Adulto.java	(date 1580935471251)
+@@ -1,5 +0,0 @@
+-package VictorTTT_programs;
+-
+-public class Adulto extends Humano
+-{
+-}
+Index: src/VictorTTT_programs/Humano.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/VictorTTT_programs/Humano.java	(date 1580957721941)
++++ src/VictorTTT_programs/Humano.java	(date 1580957721941)
+@@ -1,6 +0,0 @@
+-package VictorTTT_programs;
+-
+-public class Humano implements Hombre,Mujer
+-{
+-
+-}
+Index: src/paquete_por_defecto/EntradaEjemplo2.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/EntradaEjemplo2.java	(date 1580978633487)
++++ src/paquete_por_defecto/EntradaEjemplo2.java	(date 1580978633487)
+@@ -1,24 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class EntradaEjemplo2
+-{
+-    public static void main(String[] args)
+-    {
+-        String NombreUsuario=JOptionPane.showInputDialog("introduce tu nombre porfavor");
+-        //  clase  objeto         clase     método estático
+-        //                         javax.
+-        //                         swing
+-
+-        String edad= JOptionPane.showInputDialog("introduce la edad,por favor");
+-        //el método JOtionPane almacena por defecto en String
+-
+-        int edadUsuario=Integer.parseInt(edad);
+-        //de esta forma conseguimos transformar el string introducido en int
+-
+-        edadUsuario++;
+-
+-        System.out.println("Hola "+NombreUsuario+" el año que viene tendrás "+(edadUsuario)+" años ");
+-    }
+-}
+Index: .idea/uiDesigner.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/uiDesigner.xml	(date 1580814119438)
++++ .idea/uiDesigner.xml	(date 1580814119438)
+@@ -1,124 +0,0 @@
+-<?xml version="1.0" encoding="UTF-8"?>
+-<project version="4">
+-  <component name="Palette2">
+-    <group name="Swing">
+-      <item class="com.intellij.uiDesigner.HSpacer" tooltip-text="Horizontal Spacer" icon="/com/intellij/uiDesigner/icons/hspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="1" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="com.intellij.uiDesigner.VSpacer" tooltip-text="Vertical Spacer" icon="/com/intellij/uiDesigner/icons/vspacer.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="1" anchor="0" fill="2" />
+-      </item>
+-      <item class="javax.swing.JPanel" icon="/com/intellij/uiDesigner/icons/panel.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JScrollPane" icon="/com/intellij/uiDesigner/icons/scrollPane.png" removable="false" auto-create-binding="false" can-attach-label="true">
+-        <default-constraints vsize-policy="7" hsize-policy="7" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JButton" icon="/com/intellij/uiDesigner/icons/button.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="0" fill="1" />
+-        <initial-values>
+-          <property name="text" value="Button" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JRadioButton" icon="/com/intellij/uiDesigner/icons/radioButton.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="RadioButton" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JCheckBox" icon="/com/intellij/uiDesigner/icons/checkBox.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="3" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="CheckBox" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JLabel" icon="/com/intellij/uiDesigner/icons/label.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="8" fill="0" />
+-        <initial-values>
+-          <property name="text" value="Label" />
+-        </initial-values>
+-      </item>
+-      <item class="javax.swing.JTextField" icon="/com/intellij/uiDesigner/icons/textField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JPasswordField" icon="/com/intellij/uiDesigner/icons/passwordField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JFormattedTextField" icon="/com/intellij/uiDesigner/icons/formattedTextField.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1">
+-          <preferred-size width="150" height="-1" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextArea" icon="/com/intellij/uiDesigner/icons/textArea.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTextPane" icon="/com/intellij/uiDesigner/icons/textPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JEditorPane" icon="/com/intellij/uiDesigner/icons/editorPane.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JComboBox" icon="/com/intellij/uiDesigner/icons/comboBox.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="2" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JTable" icon="/com/intellij/uiDesigner/icons/table.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JList" icon="/com/intellij/uiDesigner/icons/list.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="2" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTree" icon="/com/intellij/uiDesigner/icons/tree.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3">
+-          <preferred-size width="150" height="50" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JTabbedPane" icon="/com/intellij/uiDesigner/icons/tabbedPane.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSplitPane" icon="/com/intellij/uiDesigner/icons/splitPane.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="3" hsize-policy="3" anchor="0" fill="3">
+-          <preferred-size width="200" height="200" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JSpinner" icon="/com/intellij/uiDesigner/icons/spinner.png" removable="false" auto-create-binding="true" can-attach-label="true">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSlider" icon="/com/intellij/uiDesigner/icons/slider.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="8" fill="1" />
+-      </item>
+-      <item class="javax.swing.JSeparator" icon="/com/intellij/uiDesigner/icons/separator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="6" anchor="0" fill="3" />
+-      </item>
+-      <item class="javax.swing.JProgressBar" icon="/com/intellij/uiDesigner/icons/progressbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JToolBar" icon="/com/intellij/uiDesigner/icons/toolbar.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="6" anchor="0" fill="1">
+-          <preferred-size width="-1" height="20" />
+-        </default-constraints>
+-      </item>
+-      <item class="javax.swing.JToolBar$Separator" icon="/com/intellij/uiDesigner/icons/toolbarSeparator.png" removable="false" auto-create-binding="false" can-attach-label="false">
+-        <default-constraints vsize-policy="0" hsize-policy="0" anchor="0" fill="1" />
+-      </item>
+-      <item class="javax.swing.JScrollBar" icon="/com/intellij/uiDesigner/icons/scrollbar.png" removable="false" auto-create-binding="true" can-attach-label="false">
+-        <default-constraints vsize-policy="6" hsize-policy="0" anchor="0" fill="2" />
+-      </item>
+-    </group>
+-  </component>
+-</project>
+\ No newline at end of file
+Index: src/paquete_por_defecto/CalculosconMath.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/CalculosconMath.java	(date 1580978031328)
++++ src/paquete_por_defecto/CalculosconMath.java	(date 1580978031328)
+@@ -1,25 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class CalculosconMath
+-{
+-    public static void main(String[] args)
+-    {
+-        //double raiz=Math.sqrt(9.52);
+-        //hemos hecho una raiz cuadrada
+-
+-		/*double num1=5.85;
+-		int resultado=(int)Math.round(num1);
+-		hemos hecho el redondeo de un n�mero aplicando
+-		la refundici�n (conversi�n expl�cita)*/
+-
+-        double base=5;
+-        double exponente=3;
+-        int resultado=(int)Math.pow(base, exponente);
+-        System.out.println("El resultado de "+base+
+-                " elevado a "+exponente+" es "+resultado);
+-
+-        System.out.println();
+-
+-
+-    }
+-}
+Index: src/paquete_por_defecto/CompruebaMailBucleFor.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/CompruebaMailBucleFor.java	(date 1580978122005)
++++ src/paquete_por_defecto/CompruebaMailBucleFor.java	(date 1580978122005)
+@@ -1,39 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-
+-public class CompruebaMailBucleFor
+-{
+-    public static void main(String[] args)
+-    {
+-        int arroba=0;
+-
+-        int dot=0;
+-
+-
+-        String mail= JOptionPane.showInputDialog("introduce Mail");
+-
+-        for (int i = 0; i < mail.length(); i++) //para i igual a cero; mientras que i sea menor que la longitud de mail;incrementa i de 1 en 1
+-        {
+-            if (mail.charAt(i)=='@') //evalua a cada vuelta de bucle si la posici�n que marca i contiene una '@'
+-            {
+-                arroba++;
+-            }
+-            if (mail.charAt(i)=='.')//evalua a cada vuelta de bucle si la posici�n que marca i contiene un '.'
+-            {
+-                dot++;
+-            }
+-        }
+-
+-        if (arroba==1 && dot>=1)//tienen que cumplirse las 2
+-        {
+-            System.out.println("es correcto");
+-        }
+-        else
+-        {
+-            System.out.println("no es correcto");
+-        }
+-
+-
+-    }
+-}
+Index: src/paquete_por_defecto/DeclaracionesOperadores.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/DeclaracionesOperadores.java	(date 1580978212036)
++++ src/paquete_por_defecto/DeclaracionesOperadores.java	(date 1580978212036)
+@@ -1,15 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class DeclaracionesOperadores
+-{
+-    public static void main(String[] args)
+-    {
+-        int a,b,c;
+-
+-        a=9;
+-        b=7;
+-        c=a+b;
+-        System.out.println(c);
+-
+-    }
+-}
+Index: src/paquete_por_defecto/EntradaEjemplo1.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/EntradaEjemplo1.java	(date 1580978333132)
++++ src/paquete_por_defecto/EntradaEjemplo1.java	(date 1580978333132)
+@@ -1,26 +0,0 @@
+-package paquete_por_defecto;
+-
+-import java.util.Scanner;
+-
+-public class EntradaEjemplo1
+-{
+-    public static void main(String[] args)
+-    {
+-
+-
+-        Scanner entrada=new Scanner(System.in);
+-
+-        System.out.println("introduce tu nombre, por favor");
+-
+-        String nombreUsuario=entrada.nextLine();
+-
+-        System.out.println("introduce edad por favor");
+-
+-        int edad=entrada.nextInt();
+-
+-        System.out.println(" Hola "+nombreUsuario+" El año que viene tendrás "+(edad+1) + " años");
+-
+-
+-    }
+-
+-}
+Index: src/paquete_por_defecto/AdivinaNumeroAleatorio.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/AdivinaNumeroAleatorio.java	(date 1580960647682)
++++ src/paquete_por_defecto/AdivinaNumeroAleatorio.java	(date 1580960647682)
+@@ -1,52 +0,0 @@
+-package paquete_por_defecto;
+-
+-import java.util.Scanner;
+-
+-public class AdivinaNumeroAleatorio
+-{
+-    public static void main(String[] args)
+-    {
+-        int aleatorio=(int)(Math.random()*100);
+-        //sintaxis de refundición + número random de 0 a 100
+-
+-        /*System.out.println(Math.random());
+-        esta es la forma de crear un número aleatorio lo que pasa es
+-        que el método estático random de la clase Math,
+-        del paquete java.util(API JAVA), nos devuelve un double entre 0 y 1
+-        nosotrosqueremos un int entre 0 y 100 entonces...
+-        multiplicamos el random por  100
+-        para desplazar la coma
+-        y aplicamosuna refundición(CASTING) para pasarlo a int
+-         */
+-
+-
+-        Scanner read=new Scanner(System.in); //objeto Scanner
+-
+-        int numero=-1;
+-        /*declaramos esta variable a -1 porque cabe la posibilidad de que el número
+-        aleatorio tome el valor de0, si pasara esto no entraría en el while.*/
+-
+-        int intentos=0;
+-
+-        while(numero!=aleatorio)//mientras el número introducido sea diferente del aleatorio
+-        {
+-            intentos++;
+-
+-            System.out.println("introduce un número, por favor\n");
+-
+-            numero=read.nextInt();
+-            //igualamos la variable número al siguiente entero introducido por consola
+-
+-            if (aleatorio<numero)
+-            {
+-                System.out.println("más bajo");
+-
+-            }
+-            else if (aleatorio > numero)
+-            {
+-                System.out.println("más alto");
+-            }
+-        }
+-        System.out.println("Correcto, has necesitado "+intentos+" intentos para averiguarlo");
+-    }
+-}
+Index: .idea/inspectionProfiles/Project_Default.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/inspectionProfiles/Project_Default.xml	(date 1580960444504)
++++ .idea/inspectionProfiles/Project_Default.xml	(date 1580960444504)
+@@ -1,10 +0,0 @@
+-<component name="InspectionProjectProfileManager">
+-  <profile version="1.0">
+-    <option name="myName" value="Project Default" />
+-    <inspection_tool class="SpellCheckingInspection" enabled="false" level="TYPO" enabled_by_default="false">
+-      <option name="processCode" value="true" />
+-      <option name="processLiterals" value="true" />
+-      <option name="processComments" value="true" />
+-    </inspection_tool>
+-  </profile>
+-</component>
+\ No newline at end of file
+Index: src/paquete_por_defecto/ArraysBidimensionales.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/ArraysBidimensionales.java	(date 1580977850112)
++++ src/paquete_por_defecto/ArraysBidimensionales.java	(date 1580977850112)
+@@ -1,44 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class ArraysBidimensionales
+-{
+-    public static void main(String[] args)
+-    {
+-        //int[][] matriz= new int [4][5];
+-
+-        int[][] matriz=
+-                {
+-                        {10,15,18,19,21,},
+-                        {5,25,37,41,15},
+-                        {7,19,32,14,90},
+-                        {85,2,7,40,27}
+-                };
+-
+-        for(int[] fila:matriz) {
+-
+-            System.out.println();
+-            //con for each
+-            for (int z : fila) {
+-
+-                System.out.print(z+" ");
+-
+-            }
+-        }
+-
+-
+-        System.out.println("\n\n\n");
+-
+-
+-
+-        for (int i = 0; i <4; i++) //filas
+-        {
+-            for (int j = 0; j<5; j++) //columnas
+-            {                                        //con for
+-                System.out.print(matriz[i][j]+" ");
+-            }
+-            System.out.println();///////////
+-        }
+-
+-
+-    }
+-}
+Index: src/paquete_por_defecto/ArraysBidimensionalesCalculodeIntereses.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/paquete_por_defecto/ArraysBidimensionalesCalculodeIntereses.java	(date 1580978031438)
++++ src/paquete_por_defecto/ArraysBidimensionalesCalculodeIntereses.java	(date 1580978031438)
+@@ -1,49 +0,0 @@
+-package paquete_por_defecto;
+-
+-public class ArraysBidimensionalesCalculodeIntereses
+-{
+-
+-
+-
+-        public static void main(String[] args)
+-        {
+-            double acumulado;
+-            double interes=0.10;
+-
+-            double[][] matriz=new double [5][6];
+-
+-            for (int i = 0; i <5; i++)
+-            {
+-                matriz [i][0]	=10000;
+-                acumulado=10000;
+-
+-                for (int j = 1; j < 6; j++)
+-                {
+-                    acumulado=acumulado+(acumulado*interes);
+-                    matriz[i][j]=acumulado;
+-                }
+-
+-                interes=interes+0.01;
+-            }
+-
+-
+-            for (int z = 0; z < 5; z++)
+-            {
+-                System.out.println();
+-
+-                for (int h = 0; h < 6; h++)
+-                {
+-                    System.out.printf("%1.2f",matriz[z][h]);
+-
+-                    System.out.print(" ");
+-                }
+-            }
+-
+-        }
+-
+-
+-
+-    //Este programa toma su ejemplo del video n� 26 del curso java pildoras inform�ticas
+-    //Es un c�lculo y representaci�n de una acumulaci�n de intereses, cualquier duda acudir al video.
+-
+-}
+Index: src/poo_pildoras/Jefes.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pildoras/Jefes.java	(date 1580896893374)
++++ src/poo_pildoras/Jefes.java	(date 1580896893374)
+@@ -1,6 +0,0 @@
+-package poo_pildoras;
+-
+-public interface Jefes extends Trabajadores
+-{
+-    String tomar_decisiones(String decision);
+-}
+Index: src/poo_pildoras/Trabajadores.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/poo_pildoras/Trabajadores.java	(date 1580896893327)
++++ src/poo_pildoras/Trabajadores.java	(date 1580896893327)
+@@ -1,11 +0,0 @@
+-package poo_pildoras;
+-
+-public interface Trabajadores
+-{
+-     double establece_bonus(double gratificacion);
+-
+-     double bonus_base=1500;//las instancias declaradas dentro de las interfaces son de tipo final por defecto
+-
+-        //los métodos de las interfaaces tan solo se definen,
+-        //no se codifica nada en su interior
+-}
+Index: src/paquete_por_defecto/AreasGeométricas.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>windows-1252
+===================================================================
+--- src/paquete_por_defecto/AreasGeométricas.java	(date 1580977628305)
++++ src/paquete_por_defecto/AreasGeométricas.java	(date 1580977628305)
+@@ -1,87 +0,0 @@
+-package paquete_por_defecto;
+-
+-import javax.swing.*;
+-import java.util.Scanner;
+-
+-public class AreasGeométricas
+-{
+-
+-
+-
+-        public static void main(String[] args)
+-        {
+-            Scanner read = new Scanner(System.in);
+-            //creamos objeto de la clase Scanner
+-
+-            System.out.println("Elige una opción:\n1: Cuadrado \n2: Rectángulo \n3: Triángulo\n4: Círculo");
+-            //Aqu? tenemos una forma sencilla de presentar una lista con \n
+-            //para una posterior secuencia de opciones switch
+-
+-            int figura = read.nextInt();
+-            //almacenamos lo introducido por consola en variable entera
+-            //para la selecci?n del switch.
+-            //el método nextInt no es estático por eso necesitamos crear
+-            //un objeto de la clase Scanner(linea 8).
+-
+-            switch (figura)
+-            {
+-                case 1:
+-
+-                    int lado = Integer.parseInt(JOptionPane.showInputDialog("introduce el lado"));
+-                    //como el método showInputDialog es estático, no  necesito
+-                    //crear un objeto pero sí hay que poner antes de él la clase
+-                    //a la que pertenece.
+-                    //Además, como lo que se introduce en la ventana resulta ser
+-                    //un string, debemos utilizar el método parseInt de la clase
+-                    //Integer de la forma que arriba se describe.
+-
+-                    System.out.println("El área del cuadrado es " + Math.pow(lado, 2));
+-
+-                    break;
+-
+-                case 2:
+-
+-                    int base = Integer.parseInt(JOptionPane.showInputDialog("introduce la base del ractángulo"));
+-                    //pásame a entero lo que el usuario introduzca en un showinputdialog
+-
+-                    int altura = Integer.parseInt(JOptionPane.showInputDialog("introduce la altura del rectángulo"));
+-
+-                    System.out.println("El área del rect?ngulo es" + base * altura);
+-
+-                    break;
+-
+-                case 3:
+-
+-                    //como la seleccíon entrará solamente en  un case, podemos utilizar el mismo nombre de variable en distintos cases
+-
+-                    base = Integer.parseInt(JOptionPane.showInputDialog("introduce la base del triángulo"));
+-
+-                    altura=Integer.parseInt(JOptionPane.showInputDialog("introduce la altura del triángulo"));
+-                    //////
+-                    System.out.println("El área del triángulo es "+(base*altura)/2);
+-
+-                    break;
+-
+-                case 4:
+-
+-                    int radio=Integer.parseInt(JOptionPane.showInputDialog("introduce el radio"));
+-
+-                    System.out.print("El ares del círculo es ");
+-                    //Imprimimos mensaje SIN salto de linea
+-
+-                    System.out.printf("%1.2f",Math.PI*(Math.pow(radio,2)));
+-                    //Imprimimos con formato de dos decimales la constante de clase Math.PI
+-                    //*el radio al cuadrado usando el método pow de la clase Math.
+-
+-                    break;
+-
+-                default:
+-
+-                    System.out.println("La opción no es correcta");
+-                }
+-            }
+-
+-
+-
+-
+-        }
+\ No newline at end of file
+diff --git out/production/PrimerosPasos/poo_pildoras/Director.class out/production/PrimerosPasos/poo_pildoras/Director.class
+deleted file mode 100644
+index 90af00bfe52fdae59b2fe703973c79db65f16355..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Empleado.class out/production/PrimerosPasos/poo_pildoras/Empleado.class
+deleted file mode 100644
+index 5955265d8ef851562d6eb8bb39686cf02991f5f5..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Empleado2.class out/production/PrimerosPasos/poo_pildoras/Empleado2.class
+deleted file mode 100644
+index d2edd539249bf611865381715ebf2f4e194f92be..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Empleados.class out/production/PrimerosPasos/poo_pildoras/Empleados.class
+deleted file mode 100644
+index 064789fe20f0b448dfddb29b0900439c57fee4d6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Alumno.class out/production/PrimerosPasos/poo_pildoras/Alumno.class
+deleted file mode 100644
+index 7310459276a081c6bb4faaf748a0040d3bc322d6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Coche.class out/production/PrimerosPasos/poo_pildoras/Coche.class
+deleted file mode 100644
+index 7b487b229dc9939220475690ce8db88a898326cc..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/untitled104/META-INF/untitled104.kotlin_module out/production/untitled104/META-INF/untitled104.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_Pesona.class out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_Pesona.class
+deleted file mode 100644
+index 042950d9dbad4e113a811152ae5cf48175915aa9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_vehículo.class out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_vehículo.class
+deleted file mode 100644
+index 49c7c8680963fd288348e424163627856bcf3862..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/paquete_por_defecto/prueba$AccesoApliccionWhile.class out/production/PruebaFuentes/untitled104/paquete_por_defecto/prueba$AccesoApliccionWhile.class
+deleted file mode 100644
+index 18c6b7850d833c5703c4be8a7549f36816aaee26..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/paquete_por_defecto/prueba.class out/production/PruebaFuentes/untitled104/paquete_por_defecto/prueba.class
+deleted file mode 100644
+index 30627b8ed3cc480e6719f748048f9bbbe2f2949a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Jefatura.class out/production/PruebaFuentes/untitled104/poo_pildoras/Jefatura.class
+deleted file mode 100644
+index 8b1c98f39c6ca50a454cf3a832d0c801dec41339..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Persona.class out/production/PruebaFuentes/untitled104/poo_pildoras/Persona.class
+deleted file mode 100644
+index 3c7fed2f224a816449389f33b1975360a11c4233..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Pruebas.class out/production/PruebaFuentes/untitled104/poo_pildoras/Pruebas.class
+deleted file mode 100644
+index 80d3cce8c1a3509d13e0dbf5c9a6b043a8efbd0c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class out/production/PruebaFuentes/untitled104/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class
+deleted file mode 100644
+index f055ecb6ee82b732121ebc63c5d87481e5908b57..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Empleado.class out/production/PruebaFuentes/untitled104/poo_pildoras/Empleado.class
+deleted file mode 100644
+index f6ebe3f2d011395e54fbf94aa4cc33296635dd4b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Empleado2.class out/production/PruebaFuentes/untitled104/poo_pildoras/Empleado2.class
+deleted file mode 100644
+index d2edd539249bf611865381715ebf2f4e194f92be..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Empleados.class out/production/PruebaFuentes/untitled104/poo_pildoras/Empleados.class
+deleted file mode 100644
+index c2b4ece4c383b844aee1ed6855e7ab0f44a56a49..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Furgoneta.class out/production/PruebaFuentes/untitled104/poo_pildoras/Furgoneta.class
+deleted file mode 100644
+index dc6abb8b9c3f18101d71a56e030b97d08a2728a7..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/META-INF/untitled104.kotlin_module out/production/PruebaFuentes/untitled104/META-INF/untitled104.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Alumno.class out/production/PruebaFuentes/untitled104/poo_pildoras/Alumno.class
+deleted file mode 100644
+index 7310459276a081c6bb4faaf748a0040d3bc322d6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Coche.class out/production/PruebaFuentes/untitled104/poo_pildoras/Coche.class
+deleted file mode 100644
+index 7b487b229dc9939220475690ce8db88a898326cc..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/untitled104/poo_pildoras/Director.class out/production/PruebaFuentes/untitled104/poo_pildoras/Director.class
+deleted file mode 100644
+index 29c6f387e1c2d876bb01e7b0589455ccc47bb597..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Pruebas.class out/production/PruebaFuentes/poo_pildoras/Pruebas.class
+deleted file mode 100644
+index 80d3cce8c1a3509d13e0dbf5c9a6b043a8efbd0c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class out/production/PruebaFuentes/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class
+deleted file mode 100644
+index f055ecb6ee82b732121ebc63c5d87481e5908b57..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Uso_Pesona.class out/production/PruebaFuentes/poo_pildoras/Uso_Pesona.class
+deleted file mode 100644
+index 042950d9dbad4e113a811152ae5cf48175915aa9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Uso_vehículo.class out/production/PruebaFuentes/poo_pildoras/Uso_vehículo.class
+deleted file mode 100644
+index 49c7c8680963fd288348e424163627856bcf3862..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Empleados.class out/production/PruebaFuentes/poo_pildoras/Empleados.class
+deleted file mode 100644
+index c2b4ece4c383b844aee1ed6855e7ab0f44a56a49..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Furgoneta.class out/production/PruebaFuentes/poo_pildoras/Furgoneta.class
+deleted file mode 100644
+index dc6abb8b9c3f18101d71a56e030b97d08a2728a7..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Jefatura.class out/production/PruebaFuentes/poo_pildoras/Jefatura.class
+deleted file mode 100644
+index 8b1c98f39c6ca50a454cf3a832d0c801dec41339..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Persona.class out/production/PruebaFuentes/poo_pildoras/Persona.class
+deleted file mode 100644
+index 3c7fed2f224a816449389f33b1975360a11c4233..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Coche.class out/production/PruebaFuentes/poo_pildoras/Coche.class
+deleted file mode 100644
+index 7b487b229dc9939220475690ce8db88a898326cc..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Director.class out/production/PruebaFuentes/poo_pildoras/Director.class
+deleted file mode 100644
+index 29c6f387e1c2d876bb01e7b0589455ccc47bb597..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Empleado.class out/production/PruebaFuentes/poo_pildoras/Empleado.class
+deleted file mode 100644
+index f6ebe3f2d011395e54fbf94aa4cc33296635dd4b..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Empleado2.class out/production/PruebaFuentes/poo_pildoras/Empleado2.class
+deleted file mode 100644
+index d2edd539249bf611865381715ebf2f4e194f92be..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/poo_pildoras/Alumno.class out/production/PruebaFuentes/poo_pildoras/Alumno.class
+deleted file mode 100644
+index 7310459276a081c6bb4faaf748a0040d3bc322d6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/META-INF/Prueba fuentes.kotlin_module out/production/PruebaFuentes/META-INF/Prueba fuentes.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PruebaFuentes/META-INF/untitled104.kotlin_module out/production/PruebaFuentes/META-INF/untitled104.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/AccesoAplicacionWhile.class out/production/PrimerosPasos/paquete_por_defecto/AccesoAplicacionWhile.class
+deleted file mode 100644
+index 9b9a85642afff412a918b2feca60d62096d13294..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/FactorialForOptionPane.class out/production/PrimerosPasos/paquete_por_defecto/FactorialForOptionPane.class
+deleted file mode 100644
+index eb1b0201a0fba03b72a2ad3a7e268420ce4cad61..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/EntradaEjemplo1.class out/production/PrimerosPasos/paquete_por_defecto/EntradaEjemplo1.class
+deleted file mode 100644
+index cbf1f295a79dda363ede0b620cff692684a3e6be..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/PesoIdealJoptionPane.class out/production/PrimerosPasos/paquete_por_defecto/PesoIdealJoptionPane.class
+deleted file mode 100644
+index d839220c030a06326db3a7b956a5b95edce86c9e..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Anciano.class out/production/PrimerosPasos/VictorTTT_programs/Anciano.class
+deleted file mode 100644
+index 8b44659d0d20fd65671bce64b5802fe18bc74b69..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UsoVariablesJava.class out/production/PrimerosPasos/paquete_por_defecto/UsoVariablesJava.class
+deleted file mode 100644
+index fa0bd6c157dafe947fb2f03bb793e68dd06ece3f..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UsoArrays.class out/production/PrimerosPasos/paquete_por_defecto/UsoArrays.class
+deleted file mode 100644
+index c23b7f200d6487d24211042c71d5056999a616e0..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UsoBucleFor.class out/production/PrimerosPasos/paquete_por_defecto/UsoBucleFor.class
+deleted file mode 100644
+index c2da9e4c2956fe6e8a5916f88d94e6123589787c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Adulto.class out/production/PrimerosPasos/VictorTTT_programs/Adulto.class
+deleted file mode 100644
+index 4c2250711b8178e03453e11daf067019ca7169ed..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/EntradaNúmeros.class out/production/PrimerosPasos/paquete_por_defecto/EntradaNúmeros.class
+deleted file mode 100644
+index 7a9220a0098bf9cf95d0b6d94717da69897bdc26..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Humano.class out/production/PrimerosPasos/VictorTTT_programs/Humano.class
+deleted file mode 100644
+index fdb95be848d2fece9b57bbd17bf0bbc702111d85..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/AreasGeométricas.class out/production/PrimerosPasos/paquete_por_defecto/AreasGeométricas.class
+deleted file mode 100644
+index 41c66e33d9fe4f40d3c7f0e24149c5845b3e119c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/CompruebaMailBucleFor.class out/production/PrimerosPasos/paquete_por_defecto/CompruebaMailBucleFor.class
+deleted file mode 100644
+index 08cb86aa519a12767689c021743490c8d3387668..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/ArraysBidimensionales.class out/production/PrimerosPasos/paquete_por_defecto/ArraysBidimensionales.class
+deleted file mode 100644
+index 1d744aaa32b0dda290605f0b08b0326c47cacae5..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UoArrays4ForeachAleatorio.class out/production/PrimerosPasos/paquete_por_defecto/UoArrays4ForeachAleatorio.class
+deleted file mode 100644
+index c3519dc68be55e047edb96d23dcac59ad9addd10..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Trabajadores.class out/production/PrimerosPasos/poo_pildoras/Trabajadores.class
+deleted file mode 100644
+index 2c05cad892e2617602b635ebcf46d510c763cc73..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Mujer.class out/production/PrimerosPasos/VictorTTT_programs/Mujer.class
+deleted file mode 100644
+index 63661a525e528106166d324816e6301cfa9ef2bc..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/DeclaracionesOperadores.class out/production/PrimerosPasos/paquete_por_defecto/DeclaracionesOperadores.class
+deleted file mode 100644
+index 15f1272dbf533bc551fc5049c2573b9e2b1084fe..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/ManipulacióndeCadenas2.class out/production/PrimerosPasos/paquete_por_defecto/ManipulacióndeCadenas2.class
+deleted file mode 100644
+index df7c2d7360f6d740d5a3c2a8cc4d8d9c1dc0e7ee..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/ManipulacióndeCadenas3.class out/production/PrimerosPasos/paquete_por_defecto/ManipulacióndeCadenas3.class
+deleted file mode 100644
+index 2b2481112dd92f1dfd0ac877c112e13f76bb2d89..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UsoArrays3Foreach.class out/production/PrimerosPasos/paquete_por_defecto/UsoArrays3Foreach.class
+deleted file mode 100644
+index e492a60c62a1be419481c2a4a613d02d252cdd3c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/Uso_tallas$Talla.class out/production/PrimerosPasos/paquete_por_defecto/Uso_tallas$Talla.class
+deleted file mode 100644
+index 3ddc8e0ca408030c24fce9a5e15bd77de16d5e7d..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Jefes.class out/production/PrimerosPasos/poo_pildoras/Jefes.class
+deleted file mode 100644
+index 9bdf59b433837462a442d6b20a6c22bde8a742fe..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/AdivinaNumeroAleatorio.class out/production/PrimerosPasos/paquete_por_defecto/AdivinaNumeroAleatorio.class
+deleted file mode 100644
+index eccd4994f86f60d52b120b62a86f0b86a110f90a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Hombre.class out/production/PrimerosPasos/VictorTTT_programs/Hombre.class
+deleted file mode 100644
+index 31246825566d57b3ddd8781638541645d09bb2f6..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Nino.class out/production/PrimerosPasos/VictorTTT_programs/Nino.class
+deleted file mode 100644
+index a78e3b6fe3ed229627a4ee5e605f7675d61e018e..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/VictorTTT_programs/Uso_Humano.class out/production/PrimerosPasos/VictorTTT_programs/Uso_Humano.class
+deleted file mode 100644
+index e471dc09cf996119fa6bbdebcc230ee2f1e7d840..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/META-INF/PrimerosPasos.kotlin_module out/production/PrimerosPasos/META-INF/PrimerosPasos.kotlin_module
+deleted file mode 100644
+index a49347afef10a9b5f95305e1058ba36adec7d6dd..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/EvaluaEdad.class out/production/PrimerosPasos/paquete_por_defecto/EvaluaEdad.class
+deleted file mode 100644
+index a091bcaf722d13fac2bb783759724faa8fc682e0..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/ManipulaciondeCadenas1.class out/production/PrimerosPasos/paquete_por_defecto/ManipulaciondeCadenas1.class
+deleted file mode 100644
+index f345246575ab03532cdef021610f42146a633a37..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/UsoArrays2Foreach.class out/production/PrimerosPasos/paquete_por_defecto/UsoArrays2Foreach.class
+deleted file mode 100644
+index 6676277bb46f158f14cb44e761cbe9c0199ab046..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/Uso_tallas.class out/production/PrimerosPasos/paquete_por_defecto/Uso_tallas.class
+deleted file mode 100644
+index 31bba236852ded4704dfa158c0432807a9fa2ab8..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/CalculosconMath.class out/production/PrimerosPasos/paquete_por_defecto/CalculosconMath.class
+deleted file mode 100644
+index 65d895ac633f7df6936d2f0ecac42e40e2f5847c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/EntradaEjemplo2.class out/production/PrimerosPasos/paquete_por_defecto/EntradaEjemplo2.class
+deleted file mode 100644
+index b71ed9139bf41f19c76e8861f13d5ae998d1878a..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/paquete_por_defecto/ArraysBidimensionalesCalculodeIntereses.class out/production/PrimerosPasos/paquete_por_defecto/ArraysBidimensionalesCalculodeIntereses.class
+deleted file mode 100644
+index d8f06dd1237f378c8c9b437907dcbb28ad1d81ac..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class out/production/PrimerosPasos/poo_pildoras/Uso_Empleado1archivoClasesPropiasYPredefinidas.class
+deleted file mode 100644
+index ff4df2f2d01ae62793776b464dd4895e739e44c9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Uso_Pesona.class out/production/PrimerosPasos/poo_pildoras/Uso_Pesona.class
+deleted file mode 100644
+index 042950d9dbad4e113a811152ae5cf48175915aa9..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Uso_vehículo.class out/production/PrimerosPasos/poo_pildoras/Uso_vehículo.class
+deleted file mode 100644
+index 01c4f75252e91f2a687deaf1d0e1659988589fee..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Furgoneta.class out/production/PrimerosPasos/poo_pildoras/Furgoneta.class
+deleted file mode 100644
+index dc6abb8b9c3f18101d71a56e030b97d08a2728a7..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Jefatura.class out/production/PrimerosPasos/poo_pildoras/Jefatura.class
+deleted file mode 100644
+index 039fc219c40ecba57cea75aae3741819d162b2f5..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Persona.class out/production/PrimerosPasos/poo_pildoras/Persona.class
+deleted file mode 100644
+index 3c7fed2f224a816449389f33b1975360a11c4233..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+
+diff --git out/production/PrimerosPasos/poo_pildoras/Pruebas.class out/production/PrimerosPasos/poo_pildoras/Pruebas.class
+deleted file mode 100644
+index 80d3cce8c1a3509d13e0dbf5c9a6b043a8efbd0c..0000000000000000000000000000000000000000
+GIT binary patch
+literal 0
+Hc$@<O00001
+

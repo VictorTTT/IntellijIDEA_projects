@@ -14,5 +14,7 @@ public class Uso_Humano
         System.out.println("mensaje escrito en pc escritorio");
 
         System.out.println("ahora vuelvo a cambiar todo lo que hay en el archivo");
+
+        System.out.println("por último vuelvo a hacerlo desde el portátil hacia el pc de escritorio");
     }
 }

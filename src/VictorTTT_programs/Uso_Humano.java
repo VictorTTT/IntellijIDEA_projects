@@ -6,5 +6,7 @@ public class Uso_Humano
     {
         System.out.println("hola desde IntellijIDEA");
 
+
+        System.out.println("segundo mensaje");
     }
 }

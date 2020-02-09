@@ -4,17 +4,14 @@ public class Uso_Humano
 {
     public static void main(String[] args)
     {
-        System.out.println("hola desde IntellijIDEA");
+        Nino Enzo=new Nino( " muchos ", 20);
 
+        Enzo.dime_datos_generalesHumano();
 
-        System.out.println("segundo mensaje");
+        Enzo.dimeDatosNino();
 
-        System.out.println("hola me faltaba este mensasje");
+        Enzo.setRaza("caucásica");
 
-        System.out.println("mensaje escrito en pc escritorio");
-
-        System.out.println("ahora vuelvo a cambiar todo lo que hay en el archivo");
-
-        System.out.println("por Ãºltimo vuelvo a hacerlo desde el portÃ¡til hacia el pc de escritorio");
+        System.out.println("Enzo es un niño humano de raza "+ Enzo.getRaza()+Enzo.dime_datos_generalesHumano()+Enzo.dimeDatosNino());
     }
 }

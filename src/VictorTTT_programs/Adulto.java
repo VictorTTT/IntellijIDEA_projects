@@ -3,20 +3,19 @@ package VictorTTT_programs;
 public class Adulto extends Humano//la clase Adulto hereda de Humano, por loque tendrá
         // todas sus propiedades más las que se definan dentro de ella
 {
-    private boolean hipoteca;
+    private String hipoteca ;
 
     private int hijos;
 
-    private boolean trabajo;
+    private String trabajo;
 
 
 
-    public Adulto(boolean hipoteca, int hijos, boolean trabajo)
+    public Adulto( String hipoteca, int hijos, String trabajo)
     {
         super();//Llamamos al constructor de Humano.
 
-        this.hipoteca = hipoteca;//esta variable que tiene el mismo nombe
-        // que el parámetro del método constructor, almacenará lo que se le pase desde el main
+        this.hipoteca=hipoteca;
 
         this.hijos = hijos;//esta variable que tiene el mismo nombe
         // que el parámetro del método constructor, almacenará lo que se le pase desde el main
@@ -27,35 +26,14 @@ public class Adulto extends Humano//la clase Adulto hereda de Humano, por loque 
 
     public String dimeDatosAdulto()
     {
-        return " y también tiene  "
-                +hijos+" hijos ";
+        return " y como adulto que es tiene  "
+                +hijos+" hijos, es "+trabajo+" y su situación inmobiliaria es "+hipoteca;
 
     }
 
-    public String setHipoteca()
-    {
-        if (hipoteca)
-        {
-            return " Tiene hipoteca ";
-        }
-        else
-        {
-            return " No tiene hipoteca ";
-        }
-    }
 
-    public String trabajo()
-    {
-        if (trabajo)
-        {
 
-            return " Tiene trabajo";
-        }
-        else
-        {
-            return "No tiene trabajo";
-        }
-    }
+
 }
 
 

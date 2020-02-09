@@ -9,6 +9,8 @@ public class Adulto extends Humano//la clase Adulto hereda de Humano, por loque 
 
     private boolean trabajo;
 
+
+
     public Adulto(boolean hipoteca, int hijos, boolean trabajo)
     {
         super();//Llamamos al constructor de Humano.
@@ -25,8 +27,36 @@ public class Adulto extends Humano//la clase Adulto hereda de Humano, por loque 
 
     public String dimeDatosAdulto()
     {
-        return " Un Adulto es un humano, por lo tanto tiene atributos de humano y puede tener "
-                +hijos+" hijos "
-                ;
+        return " y también tiene  "
+                +hijos+" hijos ";
+
+    }
+
+    public String setHipoteca()
+    {
+        if (hipoteca)
+        {
+            return " Tiene hipoteca ";
+        }
+        else
+        {
+            return " No tiene hipoteca ";
+        }
+    }
+
+    public String trabajo()
+    {
+        if (trabajo)
+        {
+
+            return " Tiene trabajo";
+        }
+        else
+        {
+            return "No tiene trabajo";
+        }
     }
 }
+
+
+

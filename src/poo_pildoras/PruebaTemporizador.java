@@ -67,7 +67,7 @@ class DameLaHora implements ActionListener
 
         Date ahora=new Date();//dentro de este objeto almacenamos la hora y se la pasaremos como parámetro al mensaje impreso en consola
 
-        System.out.printf("Te pongo la hora cada 5 seg: "+ ahora);
+        System.out.println("Te pongo la hora cada 5 seg: "+ ahora);
 
         Toolkit.getDefaultToolkit().beep();//método de la clase toolkit que emite sonido cada vez que actua el evento
 

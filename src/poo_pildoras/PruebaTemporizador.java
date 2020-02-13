@@ -24,12 +24,12 @@ public class PruebaTemporizador
 
         //Debido a las reglas de herencia de las interfaces aquí también funcionaría:
         //ActionListener oyente=new DameLaHora();
-        DameLaHora oyente=new DameLaHora();//creamos la instancia oyente de la clase DameLaHora
+        DameLaHora oyente = new DameLaHora();//creamos la instancia oyente de la clase DameLaHora
         //que implementa la interfaz action listener
 
 
-        Timer mitemporizador=new Timer(5000,oyente);//(int delay, ////////Action listener////////)
-        /*para utilizar la interfaz action listener como parámetro, siguiendo las instrucciones
+        Timer mitemporizador = new Timer(5000, oyente);//(int delay, ////////Action listener////////)
+        /*para utilizar la interfaz action listener; como parámetro, siguiendo las instrucciones
          que nos marca la api
         debemos : primero,importar el paquete al que coresponde(java.awt.event). Acto seguido, debido a la regla de
         implementacion de metodos de las
@@ -48,7 +48,7 @@ public class PruebaTemporizador
         mitemporizador.start();//le decimos al programa que comience a ejecutar la instrucción mi temporizador,
         //para ello utilizamos el método start() perteneciente a la clase timer podemos usarlo gracias a que hemos importado paquete
 
-        JOptionPane.showMessageDialog(null,"Pulsa Aceptar para detener");
+        JOptionPane.showMessageDialog(null, "Pulsa Aceptar para detener");
         //debemos poner esta ventana debido a que de n o hacerlo el programa terminaria repentinamente
         //Entonces gracias a que este tipo de acciones dejan el programa en ejecucion, podemos ver el funcionamiento del
         // mismo durante el periodode tiempo que creamos necesario
@@ -58,6 +58,7 @@ public class PruebaTemporizador
 
     }
 }
+
 class DameLaHora implements ActionListener
 {/*Esto nos obliga a implementar a continuación todos los métodos que desarrolla esta interfaz, y allá vamos:*/
 
@@ -65,9 +66,9 @@ class DameLaHora implements ActionListener
     {//Como lo que queremos es que salga por pantalla cada cierto tiempo un mensaje con la hora, crearemos un
         // objeto de la clase date:
 
-        Date ahora=new Date();//dentro de este objeto almacenamos la hora y se la pasaremos como parámetro al mensaje impreso en consola
+        Date ahora = new Date();//dentro de este objeto almacenamos la hora y se la pasaremos como parámetro al mensaje impreso en consola
 
-        System.out.println("Te pongo la hora cada 5 seg: "+ ahora);
+        System.out.println("Te pongo la hora cada 5 seg: " + ahora);
 
         Toolkit.getDefaultToolkit().beep();//método de la clase toolkit que emite sonido cada vez que actua el evento
 

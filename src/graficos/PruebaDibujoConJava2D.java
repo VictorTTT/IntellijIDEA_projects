@@ -23,7 +23,7 @@ class Dibujo2D extends JFrame
     {
         setVisible(true);
 
-        setSize(500,300);
+        setSize(500,500);
 
         setTitle("Marco con dibujo 2D");
 
@@ -87,9 +87,17 @@ class Lamina2D extends JPanel
         double CentroenY=rectangulo.getCenterY();
 
         double radio=150;//como lo que queremos esque el círculo salga por fuera del rectángulo le damos al radio de
-        // nuestra circunferencia el alto del rectángulo. De este modo,como el perímetro es radio por 2 el perímetro
-        // será el doble de lo que le pasemos como radio y el circulo será más grande que el rectángulo
-
+        // nuestra circunferencia el alto del rectángulo.
+        
+        
+        Ellipse2D circulo= new Ellipse2D.Double();//Para crear el círculo instanciamos la clase Ellipse2D
+        
+        circulo.setFrameFromCenter(CentroenX,CentroenY,CentroenX+radio,CentroenY+radio);/*utilizamos el objeto círculo con este método
+        para situarlo en nuestra figura*/
+        
+        g2.draw(circulo);//dibujamos el circulo
+        
+        
 
     }
 }

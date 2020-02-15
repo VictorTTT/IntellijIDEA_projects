@@ -24,7 +24,7 @@ public class SalidasFormateadas_printf
       
        
         
-        System.out.printf("El número %.3fsale exáctamne con 3 decimales.\n", 21.0);
+        System.out.printf("El número %.3f sale exáctamne con 3 decimales.\n", 21.0);
         //Mediante %.3f se especifica que se deben mostrar exactamente 3 decimales.
         //La casilla %s dentro de una plantilla que se le pasa a un System.out.printf() se debe
         //rellenar con una cadena de caracteres, es decir, con una secuencia de letras, espacios

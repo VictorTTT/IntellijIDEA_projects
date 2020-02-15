@@ -17,6 +17,6 @@ public class EjercicioVariables1
         System.out.println("El valor de y es "+y);
 
         System.out.println("La suma de ambas variable es= "+(x+y)+"\n La resta es = "+(y-x)+"\n la división= "+(y/x)+
-                "\n y la multiplicación "+(x*y));
+                "\n y la multiplicación= "+(x*y));
     }
 }

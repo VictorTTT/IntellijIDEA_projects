@@ -19,7 +19,7 @@ public class AreasGeométricas
 
             int figura = read.nextInt();
             //almacenamos lo introducido por consola en variable entera
-            //para la selecci?n del switch.
+            //para la selección del switch.
             //el método nextInt no es estático por eso necesitamos crear
             //un objeto de la clase Scanner(linea 8).
 

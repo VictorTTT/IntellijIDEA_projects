@@ -5,15 +5,28 @@ package LibroJavaEjercicios;
 //Integer.parseInt() convierte el texto introducido por teclado en un dato numérico,
 //concretamente en un número entero.
 
+import javax.swing.*;
 import java.util.Scanner;
 
 public class EntradaDatosNumericosTeclado
 {
     public static void main(String[] args)
     {
-        String linea;
+        int numero;
 
-        System.out.println(" Por favor, introduce un número ");
+        int numero1;
+
+        System.out.println(" Por favor, introduce un número por consola");
+
+        Scanner entrada=new Scanner(System.in);
+
+        numero=entrada.nextInt();
+
+
+        numero1=Integer.parseInt(JOptionPane.showInputDialog(" Introduce otro númermo por esta ventanita "));
+
+        System.out.println(" Has introducido por consola el número "+numero
+        +" y por ventana el "+numero1);
 
 
 

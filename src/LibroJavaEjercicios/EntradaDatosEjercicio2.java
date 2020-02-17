@@ -9,7 +9,7 @@ public class EntradaDatosEjercicio2
 {
     public static void main(String[] args)
     {
-        System.out.println("Por favor, introduce 2 números y haremos operacines báscas con ellos ");
+        System.out.println("Por favor, introduce 2 números y haremos operacines básicas con ellos ");
 
         int n1=Integer.parseInt(JOptionPane.showInputDialog("Introduce el primer número "));
 

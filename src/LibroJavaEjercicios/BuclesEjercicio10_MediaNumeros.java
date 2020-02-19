@@ -6,7 +6,6 @@ package LibroJavaEjercicios;
 //cuando meta un número negativo.
 
 import javax.swing.*;
-import java.util.Scanner;
 
 public class BuclesEjercicio10_MediaNumeros
 {
@@ -17,12 +16,33 @@ public class BuclesEjercicio10_MediaNumeros
                 " introduce uno negativo para terminar con la entrada y el programa continuará mostrando la media de todos ellos");
         
         
-            
-            
-            
-            
+        int n;
         
+        int suma=0;
         
+        int contador=0;
+        
+        do
+        {
+            
+            n=Integer.parseInt(JOptionPane.showInputDialog("introduce número"));
+            
+            if (n<0)break;
+    
+            contador++;
+    
+    
+            suma+=n;
+            
+            
+            
+            
+        }while(n>0);
+        
+       
+    
+        System.out.println("La media de los números que has introducido es: "+suma/contador);
+    
         
     }
 }

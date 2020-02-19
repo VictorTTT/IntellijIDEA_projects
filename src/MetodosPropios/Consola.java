@@ -9,7 +9,7 @@ public class Consola
         System.out.println("\nPresiona enter para continuar");
         
         Scanner entrada = new Scanner(System.in);//creamos un objeto de la clase Scanner
-        String cadenaVacia = "";//creamos una cadena vacía
+        String cadenaVacia;//creamos una cadena vacía
         do
         {
             cadenaVacia = entrada.nextLine();//
@@ -21,5 +21,10 @@ public class Consola
         //pero se detiene el programa hasta pulsar enter. Cuando lo pulsamos el programa continúa
         
         
+    }
+    
+    public static void limpiarConsola()
+    {
+    
     }
 }

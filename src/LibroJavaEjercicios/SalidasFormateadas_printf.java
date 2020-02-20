@@ -8,7 +8,7 @@ public class SalidasFormateadas_printf
 {
     public static void main(String[] args)
     {
-        System.out.printf("El número %d no tiene decimales.\n", 21);
+        System.out.printf("El número %d no tiene decimales.\n", 21+3);
         /*Observa que a la instrucción System.out.printf() se le pasan dos elementos; por un lado,
         una plantilla entrecomillada - "El número %d no tiene decimales.\n" - y por otro lado el/los
         dato/s separado/s por coma. En este caso únicamente se pasa un dato - el número
@@ -18,7 +18,7 @@ public class SalidasFormateadas_printf
         Los datos se insertan siempre por orden en las casillas que le corresponden. En una
         casilla %d solo se aceptan números enteros (sin decimales).*/
         
-        System.out.printf("El número %f si que sale con decimales,\n", 21.0);
+        System.out.printf("El número %f si que sale con decimales,\n", 21.0+3.2);
         //La casilla %f se debe rellenar con un número que contiene decimales. Si se escribe
         //%f tal cual, se mostrarán varios decimales, aunque no sabemos en principio cuántos.
       

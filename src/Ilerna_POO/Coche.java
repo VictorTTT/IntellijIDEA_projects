@@ -20,21 +20,21 @@ public class Coche
     
     public Coche(int ruedas, String matricula, int puertas, String color, String marca, String  modelo, boolean climatizador, boolean asientos_cuero)
     {
-        ruedas=0;
+        this.ruedas=ruedas;
         
-        matricula="";
+        this.matricula=matricula;
         
-        puertas=0;
+        this.puertas=puertas;
         
-        color="";
+        this.color=color;
         
-        marca="";
+        this.marca=marca;
         
-        modelo="";
+        this.modelo=modelo;
         
-        climatizador=false;
+        this.climatizador=climatizador;
         
-        asientos_cuero=false;
+        this.asientos_cuero=asientos_cuero;
         
        
         

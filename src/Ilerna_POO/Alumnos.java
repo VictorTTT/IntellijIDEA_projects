@@ -41,7 +41,7 @@ public class Alumnos
         this.course = course;
     }
     
-    //Métodos creados por el programador
+    //Métodos creados por el programador, comportamientos
     
     public double evaluar(double nota)//realiza funcionalidad propia de esta clase
     {

@@ -2,7 +2,7 @@ package LibroJavaEjercicios;
 
 //Muestra los números múltiplos de 5 de 0 a 100 utilizando un bucle while.
 
-import MetodosPropios.Consola;
+import VictorTTT_Metodos.Consola;
 
 public class BuclesEjercicio2_While
 {

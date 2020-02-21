@@ -1,4 +1,4 @@
-package Udemy_POO.EjerciciosPOO.Ejercicio1;
+package Udemy_POO.EjerciciosUdemy_POO;
 
 //Crea una clase capaz de crear cuentas corrientes bancarias con las siguientes características:
 //• Nombre de clase: CuentaCorriente.

@@ -39,12 +39,41 @@ public class CuentaCorriente
         
         this.saldo = saldo;
         
-        Random rnd = new Random();
+        Random rnd = new Random();//objeto aleatorio
         
-        numeroCuenta = Math.abs(rnd.nextLong());
+        numeroCuenta = Math.abs(rnd.nextLong());//asignación de número aleatorio por medi de la clase Math
         
         
     }
+
+    public void setIngreso(int cantidadIngresar)
+    {
+        saldo=saldo+cantidadIngresar;
+    }
+
+    public void setReintegro(int cantidadReintegrar)
+    {
+        saldo=saldo-cantidadReintegrar;
+    }
+
+    public double getSaldo()
+    {
+        return saldo;
+    }
+
+    public String dimeDatosGenerales()
+    {
+        return "La cuenta corriente con número "+numeroCuenta+" corresponde a "+nombreTitular+" y actualmente " +
+                " tiene un saldo de "+getSaldo()+" €";
+    }
+
+    public  void transferencia(CuentaCorriente cuenta1, CuentaCorriente cuenta2, double cantidad)
+    {
+        cuenta1.saldo=cuenta1.saldo-cantidad;
+
+        cuenta2.saldo=cuenta2.saldo+cantidad;
+    }//en este método observamos cómo pasar 2 parámetros desde el main, el método recibe dos objetos de la clase CuentaCorriente
+    //y una cantidad con la que hacer la transferencia entre ellos)
     
     
     

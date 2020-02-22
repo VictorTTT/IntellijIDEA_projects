@@ -67,7 +67,7 @@ public class CuentaCorriente
                 " tiene un saldo de "+getSaldo()+" €";
     }
 
-    public  void transferencia(CuentaCorriente cuenta1, CuentaCorriente cuenta2, double cantidad)
+    public  void transferencia(CuentaCorriente cuenta1, CuentaCorriente cuenta2,  double cantidad)
     {
         cuenta1.saldo=cuenta1.saldo-cantidad;
 

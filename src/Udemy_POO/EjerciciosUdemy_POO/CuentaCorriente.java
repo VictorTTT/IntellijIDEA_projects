@@ -48,7 +48,9 @@ public class CuentaCorriente
 
     public void setIngreso(int cantidadIngresar)
     {
-        saldo=saldo+cantidadIngresar;
+        if (cantidadIngresar<0) System.out.println("no se pueden hacer ingresos negativos");
+
+        else saldo=saldo+cantidadIngresar;
     }
 
     public void setReintegro(int cantidadReintegrar)

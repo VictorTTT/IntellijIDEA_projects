@@ -24,6 +24,8 @@ public class Uso_Empleados
 
         System.out.println(miEmpleadoalAzar.getDatosEmpleado());
 
+        System.out.println(Empleados.getIdSiguiente());
+
 
     }
 }
@@ -66,6 +68,12 @@ class Empleados
     public String getDatosEmpleado()
     {
         return "El empleado "+nombre+" pertenece a la sección de "+seccion+" y tiene el número "+Id;
+    }
+
+    public static String getIdSiguiente()//método que utilizamos para saber cuál será el siguiente Id, observamos que
+            //como se va a utilizar un campo de clas estático, el método también lo es.
+    {
+        return "El Id siguiente será "+IdSiguiente;
     }
 
 

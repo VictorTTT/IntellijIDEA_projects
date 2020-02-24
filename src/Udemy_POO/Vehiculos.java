@@ -12,7 +12,7 @@ public class Vehiculos
 
     private int largo;
 
-    private int ancho;
+    private double ancho;
 
     private int peso;
 
@@ -23,11 +23,26 @@ public class Vehiculos
     private boolean gps;
 
 
-    public Vehiculos(int ruedas, int largo, int ancho, int peso)//Constructor de la clase
+    public Vehiculos(int ruedas)//Constructor de la clase
     {
 
         //en el constructor le damos un estado inicial  a las propiedades, aunque luego vayan a variar
 
+        this.ruedas = ruedas;
+
+        largo = 2;
+
+        ancho = 1;
+
+        peso = 2;
+
+        color = "sin color";
+
+
+    }
+
+    public  Vehiculos(int ruedas, int largo, double ancho, int peso) //sobrecarga de constructores
+    {
         this.ruedas = ruedas;
 
         this.largo = largo;
@@ -37,8 +52,6 @@ public class Vehiculos
         this.peso = peso;
 
         color = "sin color";
-
-
     }
 
     public void setExtra(boolean climatizador)
@@ -46,21 +59,32 @@ public class Vehiculos
         this.climatizador = climatizador;
     }
 
-    public void setExtra(boolean gps, boolean climatizador,boolean tapiceria_cuero)//sobrecarga de métodos,
-            //mismo nombre, diferente número de parámetros
+    public void setExtra(boolean gps, boolean climatizador, boolean tapiceria_cuero)//sobrecarga de métodos,
+    //mismo nombre, diferente número de parámetros
     {
+        this.climatizador = climatizador;
 
+        this.gps = gps;
+
+        this.tapiceria_cuero = tapiceria_cuero;
     }
 
     public String getExtra()
     {
-        if (climatizador)
+        if (climatizador && !gps && !tapiceria_cuero)
+
         {
-            return " El coche tiene climatizador ";
+            return " El vehículo lleva el pack 1 de extras, sin" +
+                    " gps ni tapicería de cuero";
+        }
+        else if (climatizador && gps && tapiceria_cuero)
+        {
+            return "El vehículo lleva el pack 3 de extras, full equipe!";
+
         }
         else
         {
-            return " El coche no tiene climatizador";
+            return " La combinación de extras no se admite ";
         }
     }
 

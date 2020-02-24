@@ -1,7 +1,6 @@
 package VictorTTT_Metodos;
 
 
-
 public class Matematicas
 {
     //Comprueba si un número entero positivo es primo o no.
@@ -18,33 +17,21 @@ public class Matematicas
         }
         return true;//si completa el bucle no puede dividir con resto 0 es que es primo
     }
-    
-    
+
+
     //Devuelve el siguiente número primo  mayor al número que
     //se pasa como parámetro.
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    public static int siguientePrimo(int x)
+    {
+        while (!esPrimo(++x))
+        {
+        }
+
+        return x;
+    }
+    //Le da la vuelta a un número.
+
+
+
+
 }

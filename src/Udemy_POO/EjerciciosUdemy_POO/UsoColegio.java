@@ -26,6 +26,8 @@ public class UsoColegio
 
         Cervantes.getTodosAlumnos();
 
+        SanJavier.getDatosAlumno("juan");
+
 
     }
 }

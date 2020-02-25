@@ -29,24 +29,25 @@ public class Alumno
 
     }
 
-    public void setNotaMedia(double notaMedia)
+    public void setNotaMedia(double notaMedia)//establece nota media
     {
         this.notaMedia = notaMedia;
     }
 
 
-    public String toString()
+    public String toString()//muy interesante lo que hace este método: como lo que vamos a almacenar en el array está compuesto por varios tipos de datos
+            //con este método lo pasamos odo a string y así se puede guardar toda esta información en una sola posición del array
     {
         return "Nombre alumno: "+nombreAlumno+"\nColegio: "+this.getNombreColegioAlumno()+
                 "\nNº Alumno: "+Id+"\nNota media: "+ notaMedia;
     }
 
-    private String getNombreColegioAlumno()
+    private String getNombreColegioAlumno()//private solo para esta clase
     {
         return this.nombreColegio.getNombreColegio();
     }
 
-    public String getNombreAlumno()
+    public String getNombreAlumno()//devuelve el nombre del almuno
     {
         return nombreAlumno;
     }

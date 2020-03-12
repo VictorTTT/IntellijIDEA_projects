@@ -24,7 +24,10 @@ public class UsoContraseñas
 
         Contraseñas peticion1=new Contraseñas(numContraseñas,numCaracteres);
 
+        peticion1.setContraseña();
+
         System.out.println(peticion1.getContraseña());
+
 
 
 

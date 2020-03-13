@@ -1,5 +1,7 @@
 package Ilerna_Videotutorias;
 
+import java.io.IOException;
+
 public class Main {
 
     public static void main(String[] args)//aprender de memoria
@@ -21,5 +23,19 @@ public class Main {
         System.out.println(puerta2.toString());
 
         System.out.println(puerta3.toString());
+
+        System.err.println("Hay un error");//para mostrar errores por consola
+
+        try{
+
+            int numero=System.in.read();
+            byte bytes []=new byte[5];
+            System.out.println((char)numero);
+
+        }catch(IOException ex){
+
+            System.err.println("error al leer desde System.in");
+
+        }
     }
 }

@@ -77,5 +77,31 @@ public class Puerta {
         }
     }
 
+    public int getAlto() {
 
+        return alto;
+    }
+
+    public void setAlto(int alto) {
+
+        if (alto > 200) System.out.println("El alto de la puerta no debe ser mayor de 200");
+
+        else this.alto=alto;
+
+    }
+
+    public void mostrar(){
+
+        System.out.println("función mostrar que no tiene parametros");
+    }
+
+    public void mostrar(String texto){
+
+        System.out.println("función mostrar que recibe 1 parámetro");
+    }
+
+    public void mostrar(String texto,int numero){
+
+        System.out.println("función mostrar que recibe 2 parámetros");
+    }
 }

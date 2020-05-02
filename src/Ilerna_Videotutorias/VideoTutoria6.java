@@ -5,7 +5,7 @@ import java.util.Iterator;
 
 public class VideoTutoria6 {
     public static void main(String[] args) {
-        ArrayList<Integer> numeros= new ArrayList<>();
+        ArrayList<Integer> numeros= new ArrayList<>();//Entre los símbolos<>podemos poner el tipo de dato que queramos
         numeros.add(1);
         numeros.add(2);
         numeros.add(3);

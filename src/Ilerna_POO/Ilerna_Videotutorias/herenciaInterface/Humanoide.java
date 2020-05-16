@@ -1,6 +1,7 @@
 package Ilerna_POO.Ilerna_Videotutorias.herenciaInterface;
 
-public abstract class Humanoide {
+public abstract class Humanoide { //  classe abstracta, no queremos crear ningún objeto de ella
+    //pero sí lo haremos de las clases que hereden de ella, estas podrán acceder a sus atributos y comportamientos
     private double altura;
     private double peso;
 

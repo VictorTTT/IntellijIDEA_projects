@@ -5,7 +5,7 @@ public class Main {
         String texto = "Hola que tal";
         String texto2 = "Hola que tal";
         String texto3 = new String("Hola que tal");
-        System.out.println("Char: "+texto.charAt(4));
+        System.out.println("Char: "+texto.charAt(3));
         System.out.println(texto.equals(texto3));
         System.out.println("isEmpty()" +texto.isEmpty());
         System.out.println("lenght() "+texto.length());

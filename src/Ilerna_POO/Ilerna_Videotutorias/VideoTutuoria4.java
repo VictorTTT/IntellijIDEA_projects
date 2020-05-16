@@ -37,7 +37,7 @@ public class VideoTutuoria4 {
 
                 case 2:
                     System.out.println("introduce un nuevo texto ");
-                    teclado.next();
+                    teclado.next();//Este teclado .next sirve para limpiar eel buffer de la clase scanner
                     String texto = teclado.nextLine();
                     System.out.println("El texto introducido es : " + texto);
                     break;

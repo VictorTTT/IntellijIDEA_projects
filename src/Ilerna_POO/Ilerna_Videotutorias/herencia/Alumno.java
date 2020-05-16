@@ -23,7 +23,7 @@ public class Alumno extends Persona {
 
     @Override
     public void hablar(String texto){
-        System.out.printf("El alumno dice: "+texto);
+        System.out.print("El alumno dice: " + texto);
     }
 
 

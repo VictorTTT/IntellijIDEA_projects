@@ -6,6 +6,6 @@ public class Main {
         System.out.println(persona.toString());
         Alumno alumno = new Alumno();
         System.out.println(alumno.toString());
-        alumno.hablar("El alumno est√° hablando");
+        alumno.hablar("El alumno est· hablando");
     }
 }

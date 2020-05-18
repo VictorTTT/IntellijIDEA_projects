@@ -1,6 +1,4 @@
-package Udemy_POO.EjerciciosUdemy_POO;
-
-import VictorTTT_Metodos.Consola;
+package pidoras_Udemy_POO.EjerciciosUdemy_POO;
 
 import javax.swing.*;
 

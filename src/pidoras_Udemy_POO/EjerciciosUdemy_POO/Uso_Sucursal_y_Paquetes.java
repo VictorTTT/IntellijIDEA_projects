@@ -1,8 +1,5 @@
-package Udemy_POO.EjerciciosUdemy_POO;
+package pidoras_Udemy_POO.EjerciciosUdemy_POO;
 
-import VictorTTT_Metodos.Consola;
-
-import javax.swing.*;
 import java.util.Scanner;
 
 public class Uso_Sucursal_y_Paquetes

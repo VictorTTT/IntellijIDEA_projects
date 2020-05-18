@@ -9,7 +9,8 @@ public class Main {
         System.out.println(texto.equals(texto3));
         System.out.println("isEmpty()" +texto.isEmpty());
         System.out.println("lenght() "+texto.length());
-        String[] arr = texto.split(" ");
+        String[] arr = texto.split(" ");// Divide la cadena cada vez que encuentra el caracter especificado
+        //y coloca las divisiones en una posición del array
         for(int i=0;i<arr.length;i++){
             System.out.println(arr[i]);
         }

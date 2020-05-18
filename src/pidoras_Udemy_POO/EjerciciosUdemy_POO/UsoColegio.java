@@ -1,4 +1,4 @@
-package Udemy_POO.EjerciciosUdemy_POO;
+package pidoras_Udemy_POO.EjerciciosUdemy_POO;
 
 public class UsoColegio
 {

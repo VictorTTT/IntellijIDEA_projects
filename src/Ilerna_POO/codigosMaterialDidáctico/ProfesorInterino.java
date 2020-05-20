@@ -3,7 +3,7 @@ package Ilerna_POO.codigosMaterialDidáctico;
 public class ProfesorInterino extends Profesor{
     // Un profesor interino es un profesor, y al ser profesor una clase abstracta deberemos
 
-    //Main
+    //MainFiles
 
     public static void main(String[] args) {
 

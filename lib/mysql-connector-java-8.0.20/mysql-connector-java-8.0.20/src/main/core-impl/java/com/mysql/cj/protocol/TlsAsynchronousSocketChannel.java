@@ -169,7 +169,7 @@ public class TlsAsynchronousSocketChannel extends AsynchronousSocketChannel impl
     }
 
     /**
-     * Main entry point from caller.
+     * MainFiles entry point from caller.
      */
     @Override
     public <A> void read(ByteBuffer dest, long timeout, TimeUnit unit, A attachment, CompletionHandler<Integer, ? super A> hdlr) {

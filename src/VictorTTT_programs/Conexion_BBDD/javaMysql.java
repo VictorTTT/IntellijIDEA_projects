@@ -7,8 +7,8 @@ public class javaMysql {
     public static void main(String[] args) {
 
         //  1. Establecer  la conexión con la base de datos.
-        //hay que apuntar que el método getConnection laza una excepción que tendremos que controlar
-        //y ya de paso aprovechamos el bloque try para controlar las demás
+        //hay que apuntar que el método getConnection lanza una excepción que tendremos que controlar
+        //y ya de paso aprovechamos el bloque try para controlar las demás.
 
         try {
             //La conexión se realiza mediante la clase DriverManager por medio de su método get.Connection
@@ -18,7 +18,7 @@ public class javaMysql {
             Connection conec = DriverManager.getConnection("jdbc:mysql://localhost:3306/uf2", "root", "Calibra16v()");
 
             //2.  Crear objeto Statement (declaración) con su método createStatement
-            //que recibirá el objeto connection que hemos creado arriba
+            //que usará el objeto connection que hemos creado arriba
 
             Statement declaracion = conec.createStatement();
 

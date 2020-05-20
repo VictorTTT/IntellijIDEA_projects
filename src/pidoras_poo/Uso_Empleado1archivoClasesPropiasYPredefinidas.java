@@ -3,7 +3,7 @@ package pidoras_poo;
 import java.util.*;
 
 public class Uso_Empleado1archivoClasesPropiasYPredefinidas
-        //en este ejemplo utilizamos un único fichero fuente que contiene todas las calases que forman el programa
+        //en este ejemplo utilizamos un único fichero.txt fuente que contiene todas las calases que forman el programa
 {
 
     public static void main(String[] args)

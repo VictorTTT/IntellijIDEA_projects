@@ -6,7 +6,8 @@ public class Main {
         printData( "Texto");
         printData( 2.45);*/
 
-        Caja <String>caja=new Caja<>();
+        Caja <String>caja=new Caja<>();  //  La clase Caja no sabe qué tipo de dato va a recibir
+        //  esto lo decidimos desde el main, en este caso String
         /*
         * hemos decidido que contenga strings
         * dentro de los símbolos <> (que se denominan diamonds)

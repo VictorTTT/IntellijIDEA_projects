@@ -24,12 +24,13 @@ public class MainFiles {
             System.out.println("El fichero no existe");
         }
 
-        escribir(file);
-        leer(file);
-
+        // escribir(file);
+        // leer(file);
+        aleatorio(file);
    }
 
-    //  Ahora vamos aver de qué forma recorrer/acceder a los ficheros, para ello vamos a crear un
+    //  Ahora vamos aver de qué forma recorrer/acceder a los ficheros, En primer lugar de forma secuencial
+    //  para ello vamos a crear un
     //  conjunto de funciones que nos perimitan hacerlo.
 
     public static void escribir(File file )  { // creamos un procedimiento que reciba nuestro objeto de la clase file
@@ -73,7 +74,39 @@ public class MainFiles {
             System.out.println("Otra excepción que hay que capturar");
         }
     }
+    /*Una vez hecho esto, vamos a ver la forma de acceder a los ficheros de forma aleatoria*/
 
+    public static void aleatorio (File file){
+        try {
+            RandomAccessFile raf=new RandomAccessFile(file,"rw"); // le pasamos el archivo y el modeo en el que queremos acceder a él (read, write)
+            raf.writeBytes("Hola qué tal están ustedes"); // con este método escribiremos en el fichero,
+            // También lanza una excepción que tendremos que controlar en el bloque try catch
+            String next;
+            System.out.println("Iniciando lectura...");
+            /*Hay que tener en cuenta una característica muy importante de los  ficheros aleatorios:
+            *  la localización del puntero desde el que vamos a leer.
+            * Es decir, cuando acabamos de escribir, el puntero se encuentra al final de la "frase", entonces, si inmediatamennte
+            * pretendemos leer lo escrito, no nos va a devolver ningun resultado, porque lee desde la posición actual del puntero hasta el final
+            * del fichero.
+            * En toodo caso lo que debemos hacer es devolver el puntero al inicio del fichero
+            * para que empiece a leer desde allí, lo podremos hacer de la siguiente manera:*/
+            raf.writeBytes(" Adiós");// Esto se lo estamos añadiendo al fichero , lo que pasa esque hay que controlar que no se machaquen los datos
+            raf.setLength(raf.getFilePointer()); //  Nuevamente el secreto está en la situación actual del fichero en este caso debemos saber
+            // su ubicación actual con el método getFilePointer y a partir de ahí funcionamos
+            raf.seek(0); // devuleve el objeto RandomAccesFile a la posición indicada en el parámtro del método seek
+            while((next=raf.readLine())!=null){
+                // Para leer, mientras el String declarado sea igual al objeto con el método readline y toodo esto sea  diferente de vacío
+                System.out.println(next+ " : Tamaño --->"+ next.length()); // con esta instrucción conseguimos la longitud de caracteres que tiene el fichero
+            }
+            System.out.println("Finalización de la lectura del fichero");
+        } catch (IOException e) {
+            System.err.println("No se ha podido acceder o escribir en el fichero mediante el RandsomAccesfile");
+        }
+        // hay 2 constructores, que reciben 2 parámetros cada uno pero diferentes
+        //  El primero recibe un objeto del la clase file y un mode en String, para saber lo que es el mode acudir a la documentación oficial
+        //  Esta clase sirve tanto para leer como para escribir en un fichero,
+        //  además nos proporciona todos los mecanismos necesarios para hacerlo
+    }
 
 
 }

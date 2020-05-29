@@ -32,4 +32,11 @@ public class Ave extends Animal{
         LARGO, CORTO
     }
 
+    @Override
+    public String toString() {
+        return super.toString() +
+                ", alas='" + alas + '\'' +
+                ", pico=" + pico +
+                '}';
+    }
 }

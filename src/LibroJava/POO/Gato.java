@@ -41,9 +41,9 @@ public class Gato extends Animal {
     public String toString() { // Aquí vemos cómo, podemos llamar al to string de la
         // super clase y le añadimos lo que queremos complementar de esta
         return super.toString() +
-                "raza='" + raza + '\'' +
-                ",  tiene =" + patas +
-                ", patas y='" + sonido + '\''
+                " raza:'" + raza + '\'' +
+                ",  tiene " + patas +
+                " patas y'" + sonido + '\''
                 ;
     }
 

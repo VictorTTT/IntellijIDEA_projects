@@ -7,6 +7,13 @@ Por tanto se encarga de especificar un
 comportamiento que LUEGO tendrá que ser implementado. La interfaz no especifica
 el “cómo” ya que no contiene el cuerpo de los métodos, solo el “qué”.*/
 
+/*La interfaz indica “qué” hay que hacer y la implementación especifica “cómo”
+se hace.
+Una interfaz puede tener varias implementaciones.
+Una interfaz no se puede instanciar.
+La implementación puede contener métodos adicionales cuyas cabeceras no
+están en su interfaz.*/
+
 
 public interface MascotaInterface {
 

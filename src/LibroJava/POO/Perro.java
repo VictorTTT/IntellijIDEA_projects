@@ -34,10 +34,17 @@ public class Perro extends Animal implements MascotaInterface {
         }
 
 
-    }  // 185
+    }
 
     @Override
     public void peleaCon(Animal contrincante) {
+        if (contrincante.getClass().getSimpleName().equals("Perro")){
+            // Si el contrincante es  otro perro ( hay quefijarse de qué forma lo está invocando: contrincante.getClass().getSimpleName().equals("Perro")
+            System.out.println("ven aquí que te vas a enterar");
+
+        }else{
+            System.out.println("no me gusta pelear");
+        }
 
     }
 }

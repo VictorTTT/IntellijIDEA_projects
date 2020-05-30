@@ -35,6 +35,10 @@ Gato, Ave o Pinguino que son subclases de Animal.*/
         System.out.println("Zzzzzzz");
     }
 
+    public void come(){
+        System.out.println("Soy cualquier animal comiendo");
+    }
+
     /*Ahora vamos a declarar el tipo enumerado de la siguiente forma*/
 
     public enum Sexo{  // Me doy cuenta de que es como un método pero sin paréntesis en su declaración.

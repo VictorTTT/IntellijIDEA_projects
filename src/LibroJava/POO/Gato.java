@@ -1,10 +1,11 @@
 package LibroJava.POO;
 
-public class Gato extends Animal {
+public class Gato extends Animal implements MascotaInterface{
 
     private String raza;
     private int patas;
     private String sonido;
+
 
     /*La palabra reservada super, hace una llamada siempre AL MÉTODO EQUIVALENTE DE LA CLASE PADRE más cercana en la jererquía,
     aquí  lo podemos comprobar en la  llamada de los constructores y del toString*/
@@ -51,12 +52,27 @@ public class Gato extends Animal {
         System.out.println("Rorrorrorro");
     }
 
+    @Override
+    public String getCodigo() {
+        return null;
+    }
+
+    @Override
+    public void hazRuido() {
+
+    }
+
     public  void come(String comida){
         if (comida.equals("pescado")){
             System.out.println("Hmmm, que güenooo");
         }else{
             System.out.println("Lo siento, yo solo como pescado");
         }
+    }
+
+    @Override
+    public void peleaCon(Animal contrincante) {
+
     }
 
     public void peleaCon(Gato contrincante) {

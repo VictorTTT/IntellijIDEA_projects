@@ -5,10 +5,6 @@ al menos, tres métodos específicos de cada clase y redefne el/los método/s
 cuando sea necesario. Prueba las clases creadas en un programa en el que se
 instancien objetos y se les apliquen métodos.*/
 
-public interface Ave {
 
-void volar();
-void ponerHuevo();
-void depredador();
-
+public class Lagarto {
 }

@@ -6,4 +6,9 @@ cuando sea necesario. Prueba las clases creadas en un programa en el que se
 instancien objetos y se les apliquen métodos.*/
 
 public interface Mamifero {
+
+    void amamantar();
+    void sangreCaliente();
+    void depredador(Animal alqueMata);
+    void depredadoPor(Animal porelqueMuere);
 }

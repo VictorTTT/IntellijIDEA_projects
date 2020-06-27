@@ -1,7 +1,7 @@
 package LibroJava.POO.Ejercicios;
 
 /*Crea las clases Animal, Mamifero, Ave, Gato, Perro, Canario, Pinguino y Lagarto. Crea,
-al menos, tres métodos específicos de cada clase y redefne el/los método/s
+al menos, tres métodos específicos de cada clase y redefine el/los método/s
 cuando sea necesario. Prueba las clases creadas en un programa en el que se
 instancien objetos y se les apliquen métodos.*/
 
@@ -19,14 +19,14 @@ public abstract class Animal {
 
     public enum Sexo {MACHO,HEMBRA} //la forma de crear tipos de  datos enumerados se hace igual que un método pero sin paréntesis
     private Sexo sexo; // Después de creados los tipos, declaramos la variable con el tipo creado
-    private int patas;
-    private String sonido;
-    private int esperanzaVida;
-
+    private int patas; //toddo animal tiene un número patas, diferentes segun la especie
+    private String sonido; // cada animal emitirá un sonido distinto
+    private LocalDate esperanzaVida; // este atributo es de tipo localdate, en caso de duda consultar la api
+    private String nombre;
     //Constructores
 
     public Animal(){}
-    public Animal(Sexo sexo, int patas, String sonido, int esperanzaVida) {
+    public Animal(Sexo sexo, int patas, String sonido, LocalDate esperanzaVida) {
         this.sexo = sexo;
         this.patas = patas;
         this.sonido = sonido;
@@ -35,6 +35,14 @@ public abstract class Animal {
 
     //Getters y Setters
 
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 
     public Sexo getSexo() {
         return sexo;
@@ -60,11 +68,11 @@ public abstract class Animal {
         this.sonido = sonido;
     }
 
-    public int getEsperanzaVida() {
+    public LocalDate getEsperanzaVida() {
         return esperanzaVida;
     }
 
-    public void setEsperanzaVida(int esperanzaVida) {
+    public void setEsperanzaVida(LocalDate esperanzaVida) {
         this.esperanzaVida = esperanzaVida;
     }
 
@@ -83,14 +91,14 @@ public abstract class Animal {
             System.out.println("La reproducción es posible");
 
         }else{
-            System.out.println("La reproducción es iviable");
+            System.out.println("La reproducción es inviable");
         }
 
 
     }
 
     public Period averiguaEdad(CharSequence fechaNac){ // método que recibe una secuencia de caracteres, para formatearla posteriormente en el cuerpo del mismo)
-
+        //El método devuelve un periodo en formato fecha
         DateTimeFormatter formatoFecha=DateTimeFormatter.ofPattern("dd/MM/yyyy");  // Esta clase mediante el método ofPattern marca el formato de la fecha para poder trabajar con ella
         LocalDate fechaNacimiento=LocalDate.parse(fechaNac,formatoFecha); // La clase LocalDate recibe la secuencia de caracteres que viene como parámetro en la llamada del método, y la parsea con el objeto de la clase DaetTimeFormatter
         LocalDate fechaActual= LocalDate.now(); // creamos un objeto  de la clase LacalDate y utilizamos el método now para almacenar en él la fecha actual,
@@ -99,8 +107,12 @@ public abstract class Animal {
         //devolver el periodo comprendido entre la fecha proporcionada y la actual.
     }
 
-    /*public Period tequedaVida(Period edadActual){
+    public Period tiempoRestante(Period edadActual){
+        LocalDate fechaActual= LocalDate.now();// recogemos la fecha actual
+        return Period.between(fechaActual,getEsperanzaVida()); //el método devuelve el tiempo de vida estimado del animal
+        // teniendo en cuenta  la edad que tiene ahora y la esperanza de vida aportada.
+    }
 
-    }*/
+
 
 }

@@ -26,11 +26,11 @@ public abstract class Animal {
     //Constructores
 
     public Animal(){}
-    public Animal(Sexo sexo, int patas, String sonido, LocalDate esperanzaVida) {
+    public Animal(Sexo sexo, int patas, String sonido) {
         this.sexo = sexo;
         this.patas = patas;
         this.sonido = sonido;
-        this.esperanzaVida=esperanzaVida;
+
     }
 
     //Getters y Setters
@@ -74,6 +74,15 @@ public abstract class Animal {
 
     public void setEsperanzaVida(LocalDate esperanzaVida) {
         this.esperanzaVida = esperanzaVida;
+    }
+
+    @Override
+    public String toString() {
+        return "Hola Enzo soy un Animal " +
+                  sexo +
+                ", tengo " + patas +" patas"+
+                ", mi sonido es " + sonido  +
+                ", me llamo " + nombre ;
     }
 
     // Métodos que serán comunes a todas las subclases

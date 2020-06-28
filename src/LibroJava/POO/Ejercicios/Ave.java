@@ -7,8 +7,10 @@ instancien objetos y se les apliquen métodos.*/
 
 public interface Ave {
 
-void volar();
-void ponerHuevo();
-void depredador();
-
+    void volar();
+    void ponerHuevo();
+    void depredador(Animal alqueMata);
+    void depredadoPor(Animal porelqueMuere);
 }
+
+

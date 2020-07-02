@@ -21,28 +21,17 @@ public abstract class Animal {
     private Sexo sexo; // Después de creados los tipos, declaramos la variable con el tipo creado
     private int patas; //toddo animal tiene un número patas, diferentes segun la especie
     private String sonido; // cada animal emitirá un sonido distinto
-    private LocalDate esperanzaVida; // este atributo es de tipo localdate, en caso de duda consultar la api
+    private String fechaNacimiento; // este atributo es de tipo localdate, en caso de duda consultar la api
     private String nombre;
     //Constructores
 
-    public Animal(){}
-    public Animal(Sexo sexo, int patas, String sonido) {
-        this.sexo = sexo;
-        this.patas = patas;
-        this.sonido = sonido;
+    public Animal() {
 
     }
+
 
     //Getters y Setters
 
-
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
 
     public Sexo getSexo() {
         return sexo;
@@ -68,12 +57,20 @@ public abstract class Animal {
         this.sonido = sonido;
     }
 
-    public LocalDate getEsperanzaVida() {
-        return esperanzaVida;
+    public String getFechaNacimiento() {
+        return fechaNacimiento;
     }
 
-    public void setEsperanzaVida(LocalDate esperanzaVida) {
-        this.esperanzaVida = esperanzaVida;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
     @Override
@@ -91,6 +88,19 @@ public abstract class Animal {
         System.out.println("Estoy durmiendo");
     }
 
+    public void comer(){
+        System.out.println("Estoy comiendo");
+    }
+
+    public void nacer(){
+        System.out.println("Acabo de llegar al mundo");
+    }
+
+    public void morir(){
+        System.out.println("He muerto");
+
+    }
+
     public void aparearse(Animal pareja){
 
         if (this.getSexo().equals(Sexo.MACHO)&&pareja.getSexo().equals(Sexo.HEMBRA)){
@@ -103,10 +113,9 @@ public abstract class Animal {
             System.out.println("La reproducción es inviable");
         }
 
-
     }
 
-    public Period averiguaEdad(CharSequence fechaNac){ // método que recibe una secuencia de caracteres, para formatearla posteriormente en el cuerpo del mismo)
+    public Period averiguaEdad(CharSequence fechaNac){ // método que recibe una secuencia de caracteres (puede ser un String, preferiblemente en el formato dd/mm/yyyy)
         //El método devuelve un periodo en formato fecha
         DateTimeFormatter formatoFecha=DateTimeFormatter.ofPattern("dd/MM/yyyy");  // Esta clase mediante el método ofPattern marca el formato de la fecha para poder trabajar con ella
         LocalDate fechaNacimiento=LocalDate.parse(fechaNac,formatoFecha); // La clase LocalDate recibe la secuencia de caracteres que viene como parámetro en la llamada del método, y la parsea con el objeto de la clase DaetTimeFormatter
@@ -114,13 +123,12 @@ public abstract class Animal {
 
         return Period.between(fechaNacimiento,fechaActual); // Utilizamos la clase Period con el método between, lo que nos va a permitir
         //devolver el periodo comprendido entre la fecha proporcionada y la actual.
+        // Para ofrecer el resultado obtenido al usuario es interesante formatear la impresión en pantalla con un mensaje entendible, toddo esto ya en el main.
+        /*System.out.println(String.format("Tienes %d años, %d meses y %d días."
+                ,perro1.averiguaEdad(fechaNacimiento).getYears(),perro1.averiguaEdad(fechaNacimiento).getMonths(),perro1.averiguaEdad(fechaNacimiento).getDays()));*/
     }
 
-    public Period tiempoRestante(Period edadActual){
-        LocalDate fechaActual= LocalDate.now();// recogemos la fecha actual
-        return Period.between(fechaActual,getEsperanzaVida()); //el método devuelve el tiempo de vida estimado del animal
-        // teniendo en cuenta  la edad que tiene ahora y la esperanza de vida aportada.
-    }
+
 
 
 

@@ -6,47 +6,26 @@ cuando sea necesario. Prueba las clases creadas en un programa en el que se
 instancien objetos y se les apliquen métodos.*/
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
-public class Gato extends Animal implements Mamifero {
+public class Gato extends Mamifero {
 
-    public Gato(Sexo sexo, int patas, String sonido) {
-        super(sexo, patas, sonido);
+
+
+    public Gato() {
+        super();
+    }
+
+    public void arania() {
+        System.out.println("Toma zarpazo!!!");
+    }
+
+    public void comer(Animal animal) {
+        if (animal instanceof Canario) {
+            System.out.println("Lo siento canario pero soy tu cazador natural y ahora mismo tengo mucha hambre");
+        } else System.out.println("Este animal no me lo puedo comer, prefiero un canario");
     }
 
 
-
-
-    @Override
-    public void amamantar() {
-        if (this.getSexo().equals(Sexo.MACHO)){
-            System.out.println("Yo no puedo amamantar porque soy chico, hay que buscar a una gata");
-        }else System.out.println("Ven hijo mío, que tengo leche rica para tí");
-    }
-
-    @Override
-    public void sangreCaliente() {
-
-    }
-
-    @Override
-    public void depredador(Animal alqueMata) {
-        System.out.println("Te voy a comer porque tengo que sobrevivir pero no tengo nada en contra de tí");
-    }
-
-    @Override
-    public void depredadoPor(Animal porelqueMuere) {
-        System.out.println("Voy a correr por mi vida porque "+porelqueMuere+" me quiere comer");
-    }
-
-    //Comportamiento únicos de lor gatos
-
-    public void  araniar (){
-        System.out.println("Lo siento pero es que tengo las uñas muy largas y no lo puedo evitar");
-    }
-
-    @Override
-    public String toString() {
-
-        return super.toString()+" y soy un gato." ;
-    }
 }

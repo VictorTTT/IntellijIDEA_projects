@@ -5,10 +5,16 @@ al menos, tres métodos específicos de cada clase y redefne el/los método/s
 cuando sea necesario. Prueba las clases creadas en un programa en el que se
 instancien objetos y se les apliquen métodos.*/
 
-public interface Mamifero {
+public abstract class  Mamifero extends Animal{
 
-    void amamantar();
-    void sangreCaliente();
-    void depredador(Animal alqueMata);
-    void depredadoPor(Animal porelqueMuere);
+
+    public Mamifero() {
+        super();
+    }
+
+    public void amamantar(){
+        if (this.getSexo().equals(Sexo.MACHO)){
+            System.out.println("Soy macho y no puedo amamantar");
+        }else System.out.println("Toma teta hijito mío, hazte grande");
+    }
 }

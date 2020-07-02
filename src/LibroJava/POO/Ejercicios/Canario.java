@@ -7,41 +7,16 @@ instancien objetos y se les apliquen métodos.*/
 
 import java.time.LocalDate;
 
-public class Canario extends Animal implements Ave{
+public class Canario extends  Ave{
 
-    public Canario(Sexo sexo, int patas, String sonido) {
-        super(sexo, patas, sonido);
+
+    public Canario() {
+        super();
     }
-
-    @Override
-    public void volar() {
-        System.out.println("Estoy volando");
-    }
-
-    @Override
-    public void ponerHuevo() {
-        System.out.println("He puesto un huevo");
-    }
-
-    @Override
-    public void depredador(Animal alqueMata) {
-        System.out.println("No soy depredador de nigún animal");
-    }
-
-    @Override
-    public void depredadoPor(Animal porelqueMuere) {
-        System.out.println("Voy a correr por mi  vida");
-    }
-
-    @Override
-    public String toString() {
-        return super.toString()+ " y soy un canario";
-    }
-
-    //Métodos propios de los canarios
 
     public void cantar(){
-        System.out.println("pio,pio");
+        System.out.println("Estoy cantandoi una linda canción: piiiiio,pio,pio,piop");
     }
 
 }
+

@@ -7,40 +7,22 @@ instancien objetos y se les apliquen métodos.*/
 
 import java.time.LocalDate;
 
-public class Pinguino extends  Animal implements Ave{
+public class Pinguino extends Ave {
 
-    public Pinguino(Sexo sexo, int patas, String sonido) {
-        super(sexo, patas, sonido);
+
+    public Pinguino() {
+        super();
     }
 
-    @Override
-    public void volar() {
-
+    public void andarGracioso(){
+        System.out.println("Os hace mucha gracia mi forma de andar pero yo no puedo hacerlo de otra forma ):");
     }
 
-    @Override
-    public void ponerHuevo() {
 
-    }
 
-    @Override
-    public void depredador(Animal alqueMata) {
-        if (alqueMata.equals("Pescado")){
-            System.out.println("Me encanta este tipo de comida ");
-        }else System.out.println("Prefiero comer otra cosa, gracias...");
-    }
 
-    @Override
-    public void depredadoPor(Animal porelqueMuere) {
-        System.out.println("Voy a correr por mi vida");
-    }
 
-    public void andarHaciendoRidiculo(){
-        System.out.println("Cuando estoy fuera del agua parezco muy patoso, pero dentro de ella soy muy hábil");
-    }
-
-    @Override
-    public String toString() {
-        return super.toString()+" y soy un Pingüino";
-    }
 }
+
+
+

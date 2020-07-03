@@ -19,8 +19,9 @@ public class Lagarto extends   Reptil{
         System.out.println("Acabo de recibir un ataque y he perdido mi preciada colita");
     }
 
-
-
-
+    @Override
+    public String toString() {
+        return super.toString()+"y es un LAGARTO";
+    }
 }
 

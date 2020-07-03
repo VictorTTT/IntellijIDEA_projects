@@ -17,4 +17,9 @@ public abstract class  Mamifero extends Animal{
             System.out.println("Soy macho y no puedo amamantar");
         }else System.out.println("Toma teta hijito mío, hazte grande");
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+" es MAMÍFERO ";
+    }
 }

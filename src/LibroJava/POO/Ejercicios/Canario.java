@@ -18,5 +18,9 @@ public class Canario extends  Ave{
         System.out.println("Estoy cantandoi una linda canción: piiiiio,pio,pio,piop");
     }
 
+    @Override
+    public String toString() {
+        return super.toString()+" y es un CANARIO";
+    }
 }
 

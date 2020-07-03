@@ -31,31 +31,10 @@ public abstract class Ave extends Animal {
         }else System.out.println("Estoy volando");
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    public String toString() {
+        return super.toString()+" es un AVE ";
+    }
 }
 
 

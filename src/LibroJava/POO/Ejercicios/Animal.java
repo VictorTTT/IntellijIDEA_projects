@@ -23,6 +23,7 @@ public abstract class Animal {
     private String sonido; // cada animal emitirá un sonido distinto
     private String fechaNacimiento; // este atributo es de tipo localdate, en caso de duda consultar la api
     private String nombre;
+    private static int contador=0;// variable de clase que sirve para llevar una cuenta total de las instancias ue se han creado
     //Constructores
 
     public Animal() {
@@ -75,11 +76,9 @@ public abstract class Animal {
 
     @Override
     public String toString() {
-        return "Hola Enzo soy un Animal " +
-                  sexo +
-                ", tengo " + patas +" patas"+
-                ", mi sonido es " + sonido  +
-                ", me llamo " + nombre ;
+        return
+                contador++ +". Animal "+getSexo()+" de "+getPatas()+" patas, su sonido es "+getSonido()+" nació el "+getFechaNacimiento()+" se llama "+getNombre().toUpperCase();
+
     }
 
     // Métodos que serán comunes a todas las subclases
@@ -101,7 +100,7 @@ public abstract class Animal {
 
     }
 
-    public void aparearse(Animal pareja){
+    public void reproducirse(Animal pareja){
 
         if (this.getSexo().equals(Sexo.MACHO)&&pareja.getSexo().equals(Sexo.HEMBRA)){
             System.out.println("La reproducción es posible");
@@ -110,7 +109,7 @@ public abstract class Animal {
             System.out.println("La reproducción es posible");
 
         }else{
-            System.out.println("La reproducción es inviable");
+            System.out.println("La reproducción es imposible porque los dos animales son del mismo sexo");
         }
 
     }

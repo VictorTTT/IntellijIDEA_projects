@@ -19,4 +19,9 @@ public abstract class Reptil extends Animal {
     public void escondete(){
         System.out.println("Me acabo de esconder y ya no puedes verme");
     }
+
+    @Override
+    public String toString() {
+        return super.toString()+" es un REPTIL ";
+    }
 }

@@ -18,10 +18,10 @@ public class Pinguino extends Ave {
         System.out.println("Os hace mucha gracia mi forma de andar pero yo no puedo hacerlo de otra forma ):");
     }
 
-
-
-
-
+    @Override
+    public String toString() {
+        return super.toString()+" y es un PINGÜINO";
+    }
 }
 
 

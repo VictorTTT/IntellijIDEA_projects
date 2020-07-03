@@ -15,6 +15,7 @@ public class Gato extends Mamifero {
 
     public Gato() {
         super();
+
     }
 
     public void arania() {
@@ -27,5 +28,8 @@ public class Gato extends Mamifero {
         } else System.out.println("Este animal no me lo puedo comer, prefiero un canario");
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString()+" y es un GATO";
+    }
 }

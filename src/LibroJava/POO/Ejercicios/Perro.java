@@ -24,5 +24,8 @@ public class Perro extends Mamifero {
         }else System.out.println("No me gusta el animal que me estás ofreciendo, prefiero lo gatos");
     }
 
-
+    @Override
+    public String toString() {
+        return super.toString()+" y es un PERRO";
+    }
 }

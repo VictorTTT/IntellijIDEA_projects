@@ -51,7 +51,8 @@ public class PruebaAnimal {
                 case 1:
 
                     Gato nuevoGato = new Gato();
-                    gatos.add(nuevoGato);animales.add(nuevoGato);
+                    gatos.add(nuevoGato);
+                    animales.add(nuevoGato);
                     System.out.println("Has elegido crear un gatito, perfecto!");
 
                     System.out.println("Elige su nombre: ");
@@ -92,7 +93,8 @@ public class PruebaAnimal {
                 case 3:
 
                     Perro nuevoPerro = new Perro();
-                    perros.add(nuevoPerro);animales.add(nuevoPerro);
+                    perros.add(nuevoPerro);
+                    animales.add(nuevoPerro);
 
                     System.out.println("Has elegido crear un perrete, perfecto!");
 
@@ -135,7 +137,8 @@ public class PruebaAnimal {
                 case 5:
 
                     Canario nuevoCanario = new Canario();
-                    canarios.add(nuevoCanario);animales.add(nuevoCanario);
+                    canarios.add(nuevoCanario);
+                    animales.add(nuevoCanario);
 
                     System.out.println("Has elegido crear un canario, perfecto!");
 
@@ -178,7 +181,8 @@ public class PruebaAnimal {
                 case 7:
 
                     Pinguino nuevoPinguino = new Pinguino();
-                    pinguinos.add(nuevoPinguino);animales.add(nuevoPinguino);
+                    pinguinos.add(nuevoPinguino);
+                    animales.add(nuevoPinguino);
 
                     System.out.println("Has elegido crear un pingüino, perfecto!");
 
@@ -221,7 +225,8 @@ public class PruebaAnimal {
                 case 9:
 
                     Lagarto nuevoLagarto = new Lagarto();
-                    lagartos.add(nuevoLagarto);animales.add(nuevoLagarto);
+                    lagartos.add(nuevoLagarto);
+                    animales.add(nuevoLagarto);
 
                     System.out.println("Has elegido crear un lagarto, perfecto!");
 
@@ -275,7 +280,6 @@ public class PruebaAnimal {
         } while (seleccion != 12);
 
 
-
         System.out.println("De acuerdo, ahora que ya tenemos todos los animalitos creados, vamos a hacer alguans cosas con ellos\n\n");
         detenerConsola();
 
@@ -285,37 +289,40 @@ public class PruebaAnimal {
         detenerConsola();
 
 
-
-
-
         //do {
 
-            Iterator<Animal> iteratorAnimales = animales.iterator();
-            while (iteratorAnimales.hasNext()) {
-                System.out.println(iteratorAnimales.next());
-            }
-
-            System.out.println("Haz la prueba, coge un animal de los que has creado y dile que haga una acción de la lista");
-            System.out.println(
-                    "1---> Dormir\n" +
-                    "2---> Comer\n" +
-                    "3---> Nacer\n" +
-                    "4---> Morir\n" +
-                    "5---> Reproducirse\n" +
-                    "6---> Averiguar su edad exacta\n\n\n");
-
-        System.out.println("Escribe el nombre exacto que le ha puesto al  animal :");
-       // if(animales.
+        Iterator<Animal> iteratorAnimales = animales.iterator();
+        while (iteratorAnimales.hasNext()) {
+            System.out.println(iteratorAnimales.next());
         }
 
+        System.out.println("Haz la prueba, coge un animal de los que has creado y dile que haga una acción de la lista");
+        System.out.println(
+                "1---> Dormir\n" +
+                        "2---> Comer\n" +
+                        "3---> Nacer\n" +
+                        "4---> Morir\n" +
+                        "5---> Reproducirse\n" +
+                        "6---> Averiguar su edad exacta\n\n\n");
 
-        //}while (seleccion!=10);
+        System.out.println("Escribe el nombre exacto que le has puesto al  animal :");
+        String nombre = entrada.nextLine();
+        for (int i = 0; i <animales.size() ; i++) {
+
+            System.out.println("El animal que has elegido es: "+ nombre+(i)+animales.get(i));
 
 
 
 
+        }
 
     }
+
+
+
+
+
+}
 
 
 

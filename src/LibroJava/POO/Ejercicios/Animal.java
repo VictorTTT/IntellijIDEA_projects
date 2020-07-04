@@ -77,7 +77,7 @@ public abstract class Animal {
     @Override
     public String toString() {
         return
-                contador++ +". Animal "+getSexo()+" de "+getPatas()+" patas, su sonido es "+getSonido()+" nació el "+getFechaNacimiento()+" se llama "+getNombre().toUpperCase();
+                contador++ +". Animal "+getSexo()+" de "+getPatas()+" patas, su sonido es "+getSonido().toUpperCase()+" nació el "+getFechaNacimiento()+" se llama "+getNombre().toUpperCase();
 
     }
 

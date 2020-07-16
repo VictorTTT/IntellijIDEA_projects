@@ -12,31 +12,33 @@ public class Zona {
 
     //Atributos
 
-    private int entradasPorVender;
+    private int entradasPorVender;/*declaramos una única variable común para todas las entradas
+    sin importar la zona a la que van a haccer referencia*/
+
 
     //Constructor
 
-    public Zona(int n) {
+    public Zona(int n) { /*El constructor de cada zona recibe  el número de entradas que le quedan */
         entradasPorVender = n;
     }
 
     //Getter
 
-    public int getEntradasPorVender() {
+    public int getEntradasPorVender() { /*este getter devuelve el numero de entradas que le queda a cada zona*/
         return entradasPorVender;
     }
 
     //Métodos de programa
 
     public void vender(int n) {
-        if (this.entradasPorVender == 0) {
+        if (this.entradasPorVender == 0) {//si a esta zona no le queda ninguna entrada por vender...
             System.out.println("Lo siento, las entradas para esa zona están agotadas.");
-        } else if (this.entradasPorVender < n) {
+        } else if (this.entradasPorVender < n) {// si no, si las entradas que quedan son inferiores al pedido realizado...
             System.out.println("Sólo me quedan " + this.entradasPorVender
                     + " entradas para esa zona.");
         }
-        if (this.entradasPorVender >= n) {
-            entradasPorVender -= n;
+        if (this.entradasPorVender >= n) {//En caso que la venta pueda realizarse...
+            entradasPorVender -= n;//Restamos el pedido de las que tenemos y guardamos datos en la variable
             System.out.println("Aquí tiene sus " + n + " entradas, gracias.");
         }
     }

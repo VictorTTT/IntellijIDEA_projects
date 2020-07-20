@@ -13,11 +13,12 @@ import java.util.Scanner;
 public class ZonaMain {
     public static void main(String[] args) {
 
-        System.out.println("Este programa getiona la venta de entradas\n" +
+        System.out.println("Este programa gestiona la venta de entradas\n" +
                 "de Expocoches Campanillas");
 
         Scanner entrada = new Scanner(System.in);
         int seleccion;
+        int seleccion2;
 
         Zona principal = new Zona(1000);
         Zona compraVenta = new Zona(200);
@@ -34,7 +35,7 @@ public class ZonaMain {
             switch (seleccion) {
                 case 1:
 
-                    System.out.println("Actualmente, estas son las entradas disponibles en cada zona: ");
+                    System.out.println("Actualmente, estas son las entradas que hay disponibles en cada zona: ");
                     System.out.println("En la sala principal quedan " + principal.getEntradasPorVender());
                     System.out.println("En la zona de compra venta quedan " + compraVenta.getEntradasPorVender());
                     System.out.println("En la zona vip quedan: " + vip.getEntradasPorVender());
@@ -51,27 +52,27 @@ public class ZonaMain {
                                 "2. Zona Compra-Venta\n" +
                                 "3. Zona Vip\n" +
                                 "4. Salir de la compra de entradas");
-                        seleccion = entrada.nextInt();
+                        seleccion2 = entrada.nextInt();
                         entrada.nextLine();
 
-                        if (seleccion == 1) {
+                        if (seleccion2 == 1) {
                             System.out.println("Usted ha elegido la sala prinipal, cuantas entradas desea?");
                             principal.vender(entrada.nextInt());
                             entrada.nextLine();
                             break;
-                        } else if (seleccion == 2) {
+                        } else if (seleccion2 == 2) {
                             System.out.println("Usted ha elegido la Zona de Compra-Venta, cuantas entradas desea?");
                             compraVenta.vender(entrada.nextInt());
                             entrada.nextLine();
                             break;
-                        } else if (seleccion == 3) {
+                        } else if (seleccion2 == 3) {
                             System.out.println("Usted ha elegido la Zona V.I.P, cuantas entradas desea?");
                             vip.vender(entrada.nextInt());
                             entrada.nextLine();
                             break;
                         }
 
-                    } while (seleccion != 4);
+                    } while (seleccion2 != 4);
 
 
                     break;

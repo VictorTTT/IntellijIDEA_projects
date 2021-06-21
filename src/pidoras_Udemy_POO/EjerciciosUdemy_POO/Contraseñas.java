@@ -45,15 +45,15 @@ public class Contraseñas {
 
             char caracter;//variable local que almacenará un caracter caracter que será número, mayúscula ó minuscula
 
-            caracter  =(char) (rnd.nextInt(122)+1);//aleatorio elige número comprendido entre el 1 y el 122 y lo conVierte en ASCII
+            caracter = (char) (rnd.nextInt(122) + 1);//aleatorio elige número comprendido entre el 1 y el 122 y lo conVierte en ASCII
 
-           if(caracter>=48&&caracter<=57||caracter>=65&&caracter<=90||caracter>=97&&caracter<=122){
+            if (caracter >= 48 && caracter <= 57 || caracter >= 65 && caracter <= 90 || caracter >= 97 && caracter <= 122) {
 
-            //Si el caracter es número, mayúscula ó minuscula
+                //Si el caracter es número, mayúscula ó minuscula
 
-               contraseña+=caracter;//se almacenará en la contraseña
+                contraseña += caracter;//se almacenará en la contraseña
 
-           }else i--;//si no, se resta una vuelta de bucle y por lo tanto no se almacena
+            } else i--;//si no, se resta una vuelta de bucle y por lo tanto no se almacena
 
         }
 

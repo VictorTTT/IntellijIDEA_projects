@@ -2,23 +2,47 @@ package pidoras_Udemy_POO;
 
 import java.util.GregorianCalendar;
 
-public class Uso_Empleados
-{
+public class Uso_Empleados {
     public static void main(String[] args)//Ejemplo no mudulado
     {
-        Empleados Antonio = new Empleados("Antonio", 2300.5, 2005, 7, 15);
+        // Empleados Antonio = new Empleados("Antonio", 2300.5, 2005, 7, 15);
 
-        Jefes Ana = new Jefes("Ana", 2900, 2008, 8, 9);
+        // Jefes Ana = new Jefes("Ana", 2900, 2008, 8, ;
 
-        Ana.setIncentivo(300.5);
+        // Ana.setIncentivo(300.5);
 
-        System.out.println(Ana.getSueldo());
+        // System.out.println(Ana.getSueldo());
+
+        Jefes Juan = new Jefes("Juan", 8000, 2013, 8, 5);
+
+        Juan.setIncentivo(200);
+
+        Empleados[] losEmpleados = new Empleados[6];
+
+        losEmpleados[0] = new Empleados("Antonio", 2300.5, 2005, 7, 5);
+        losEmpleados[1] = new Empleados("Carlos", 5000, 2007, 6, 5);
+        losEmpleados[2] = new Empleados("Maria", 2500, 2006, 11, 7);
+        losEmpleados[3] = new Empleados("Ana", 7000, 2009, 5, 3);
+        losEmpleados[4] = Juan; // Ejemplo del principio de sustitución. Juan es un objetode tipo jefe, sin embargo está
+        // en un array de tipo empleados. Esto es posible porque la clase jefes hereda de la clase empleados.
+        /*Empleados Patricia= new Jefes("Patricia",2500,2007,5,6);
+        Jefes PatriciaSecertaria=  (Jefes)Patricia; // Casting explícito*/
+        losEmpleados[5] = new Jefes("Isabel", 8000,2007,4,2);
+        Jefes Isabel=(Jefes)losEmpleados[5]; // Down casting de objetos
+        Isabel.setIncentivo(500);
+
+
+        for (Empleados obj : losEmpleados) {
+
+            System.out.println(obj.getDatosEmpleado() + " y un salario de " + obj.getSueldo() + " €");
+
+        }
+
 
     }
 }
 
-class Empleados
-{
+class Empleados {
     private final String nombre;//el nombre lo creamos como constante porque no cambiará
 
     private double sueldo;
@@ -32,8 +56,7 @@ class Empleados
     //Por este motivo, cada vez que un objeto o método quiera acceder a ella, deberá incluir el nombre de la clase antes
     //para hacerlo. Podemos observar que se le da valor fuera del constructor y dentro del ámbito de la clase.
 
-    public Empleados(String nom, double sue, int agno, int mes, int dia)
-    {
+    public Empleados(String nom, double sue, int agno, int mes, int dia) {
         nombre = nom;
 
         sueldo = sue;
@@ -81,7 +104,7 @@ class Empleados
 
 }
 
-class Jefes extends Empleados//jefes hereda de empleados
+ class Jefes extends Empleados//jefes hereda de empleados
 {
 
     public Jefes(String nom, double sue, int agno, int mes, int dia)//al heredar tenemos que incluir el constructor de la clase padre
@@ -110,11 +133,13 @@ class Jefes extends Empleados//jefes hereda de empleados
     //nombre estamos haciendo una llamada recursiva. Esto se soluciona poniendo la palbra super antes de la llamda al
     //método padre,es así como salimos de la recursividad y gastamos el método de empleados.
     {
-        double sueldoJefe=super.getSueldo();//Almacenamos el sueldo del jefe en la variable
+        double sueldoJefe = super.getSueldo();//Almacenamos el sueldo del jefe en la variable
 
-        return sueldoJefe+incentivo;//Devovlvemos la variable más el incentivo
+        return sueldoJefe + incentivo;//Devovlvemos la variable más el incentivo
     }
 
 
-
 }
+
+
+

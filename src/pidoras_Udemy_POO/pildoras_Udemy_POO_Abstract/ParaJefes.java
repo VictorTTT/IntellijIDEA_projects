@@ -1,4 +1,4 @@
-package pildoras_Udemy_POO_Abstract;
+package pidoras_Udemy_POO.pildoras_Udemy_POO_Abstract;
 
 
 // Una interfaz se utiliza en Java para simular la herencia múltiple

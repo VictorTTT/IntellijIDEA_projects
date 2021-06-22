@@ -1,7 +1,6 @@
-package pildoras_Udemy_POO_Abstract;
+package pidoras_Udemy_POO.pildoras_Udemy_POO_Abstract;
 
 import java.util.Arrays;
-import java.util.Calendar;
 import java.util.Date;
 
 public class Uso_Personas {

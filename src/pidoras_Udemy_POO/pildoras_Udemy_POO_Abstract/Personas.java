@@ -1,7 +1,6 @@
-package pildoras_Udemy_POO_Abstract;
+package pidoras_Udemy_POO.pildoras_Udemy_POO_Abstract;
 
 
-import Ilerna_POO.codigosMaterialDidáctico.Empleado;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.Date;

@@ -1,6 +1,6 @@
 package LibroJava.POO;
 
-public class Gato extends Animal implements MascotaInterface{
+public class Gato extends LibroJava.POO.Animal implements MascotaInterface{
 
     private String raza;
     private int patas;
